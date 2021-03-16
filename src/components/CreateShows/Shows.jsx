@@ -88,7 +88,7 @@ export default function CreateShow() {
                 <div className="content">
                     <form onSubmit={handleSubmit} className="allForms">
                         <div className="title">
-                            <h2>Datos del evento</h2>
+                            <h2 className="titleP">Datos del evento</h2>
                         </div>
                         <div className="forms">
                             {/* CREAR SHOWS */}
