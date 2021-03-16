@@ -33,7 +33,7 @@ import { ShowsRender } from "./showcards"
 const API = process.env.REACT_APP_API;
 
 export const Shows = () => {
-    const { data, loading, error } = useFetch(`${API}/shows`)
+    const { data, loading, error } = useFetch(`${API}/api/shows`)
     if (loading) {
         return <Loading />
     }
