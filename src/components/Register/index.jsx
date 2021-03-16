@@ -46,10 +46,10 @@ export const Login = (props) => {
     return (
         <div className="row p-4">
             <ContainerHeader><Header></Header></ContainerHeader>
-            <div className="container-fluid">
-                <Navbar />
-            </div>
-            <div className="col-md-5">
+            <div className="content-login col-md-5">
+                <div className="container-nav">
+                    <Navbar />
+                </div>
                 <form onSubmit={handleSubmit} className="card card-body">
                     <div className="form-group">
                         <input
