@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import HeaderProfile from '../Profile/HeaderProfile'
+import Footer from '../Footer/index'
+
 import "../../styles/create-show.css"
 import { useHistory } from "react-router-dom";
 
@@ -80,70 +83,73 @@ export default function CreateShow() {
     console.log("SOY EL ESTADO INICIAL PADRE >>>", state)
     return (
         <>
+            <HeaderProfile></HeaderProfile>
             <div className="all">
                 <div className="content">
-                    <div className="steps">
-                        <div className="step-current">
-                            <h4>Paso 1</h4>
-                        </div>
-                        <div>
-                            <h4>Paso 2</h4>
-                        </div>
-                        <div>
-                            <h4>Paso 3</h4>
-                        </div>
-                    </div>
-                    <form onSubmit={handleSubmit}>
-                        <div>
+                    <form onSubmit={handleSubmit} className="allForms">
+                        <div className="title">
                             <h2>Datos del evento</h2>
                         </div>
                         <div className="forms">
                             {/* CREAR SHOWS */}
-                            <div className="SHOWS">
-                                <h1>CREAR SHOW</h1>
-                                <div className="div-inputs">
-                                    <label><b>*</b> Nombre del evento:</label><br></br>
-                                    <input className="inputs" onChange={handleChange} name="name_show" value={nameshow} type="text" placeholder="Nombre de el show" />
-                                </div>
-                                <div className="div-inputs">
-                                    <label><b>*</b> Precio Entrada</label><br></br>
-                                    <input className="inputs" type="text" name="precio" value={precio} onChange={handleChange} placeholder="Precio" />
-                                </div>
-                                <div className="div-inputs">
-                                    <label><b>*</b> Fecha:</label><br></br>
-                                    <input className="inputs" type="date" name="fecha" value={fecha} onChange={handleChange} />
-                                </div>
-                                <div className="div-inputs">
-                                    <label><b>*</b> Hora:</label><br></br>
-                                    <input className="inputs" name="hora" value={hora} type="time" onChange={handleChange} />
-                                </div>
-                                <div className="div-inputs">
-                                    <label><b>*</b> Descripión del evento:</label><br></br>
-                                    <textarea placeholder="Haz una breve descripción de la tematica de tu show" name="descripcion_evento" value={descripcion} onChange={handleChange} className="inputs"></textarea>
-                                </div>
-                                <div className="div-inputs">
-                                    <input type="file" className="upload-img" name="file" id="file" accept="image/png, image/jpeg image/jpg" />
-                                    <label className="label-file" htmlFor="file">Subir foto ⇪</label>
+                            <div className="Shows" id="slide1">
+                                <div className="componentShow">
+                                    <h1>CREAR SHOW</h1>
+                                    <div className="div-inputs">
+                                        <label><b>*</b> Nombre del evento:</label><br></br>
+                                        <input className="inputs" onChange={handleChange} name="name_show" value={nameshow} type="text" placeholder="Nombre de el show" />
+                                    </div>
+                                    <div className="div-inputs">
+                                        <label><b>*</b> Precio Entrada</label><br></br>
+                                        <input className="inputs" type="text" name="precio" value={precio} onChange={handleChange} placeholder="Precio" />
+                                    </div>
+                                    <div className="div-inputs">
+                                        <label><b>*</b> Fecha:</label><br></br>
+                                        <input className="inputs" type="date" name="fecha" value={fecha} onChange={handleChange} />
+                                    </div>
+                                    <div className="div-inputs">
+                                        <label><b>*</b> Hora:</label><br></br>
+                                        <input className="inputs" name="hora" value={hora} type="time" onChange={handleChange} />
+                                    </div>
+                                    <div className="div-inputs">
+                                        <label><b>*</b> Descripión del evento:</label><br></br>
+                                        <textarea placeholder="Haz una breve descripción de la tematica de tu show" name="descripcion_evento" value={descripcion} onChange={handleChange} className="inputs"></textarea>
+                                    </div>
+                                    <div className="div-inputs7">
+                                        <input type="file" className="upload-img" name="file" id="file" accept="image/png, image/jpeg image/jpg" />
+                                        <label className="label-file" htmlFor="file">Subir foto ⇪</label>
+                                    </div>
                                 </div>
                             </div>
                             {/* CREAR ARTISTAS */}
-                            <div className="ARTISTAS">
+                            <div className="Artist" id="slide2">
                                 <h1>CREAR ARTISTA</h1>
-                                <div className="div-inputs">
+                                <div className="div-inputs1">
                                     <label><b>*</b> Nombre del artista/Banda:</label><br></br>
                                     <input className="inputs" name="name_artist" value={nombreArtista} onChange={(e) => setnombreArtista(e.target.value)} type="text" placeholder="Nombre del artista o banda" />
                                 </div>
-                                <div className="div-inputs">
+                                <div className="div-inputs2">
                                     <label><b>*</b> Género:</label><br></br>
                                     <input className="inputs" type="text" name="genero" value={generoArtista} onChange={(e) => setgeneroArtista(e.target.value)} placeholder="Género del artista" />
                                 </div>
-                                <div className="div-inputs">
+                                <div className="div-inputs3">
                                     <input type="file" className="upload-img" name="file" id="file" accept="image/png, image/jpeg image/jpg" />
                                     <label className="label-file" htmlFor="file">Subir foto ⇪</label>
                                 </div>
+                                <ul class="menu">
+                                    <li>
+                                    <a href="#slide1">1</a>
+                                    </li>
+                                    <li>
+                                    <a href="#slide2">2</a>
+                                    </li>
+                                    <li>
+                                    <a href="#slide3">3</a>
+                                    </li>
+                                </ul>
                             </div>
                             {/* CREAR LUGARES */}
-                            <div className="LUGARES">
+                            <div className="Venues"  id="slide3">
                                 <h1>CREAR LUGAR</h1>
                                 <div className="div-inputs">
                                     <label><b>*</b> Nombre del establecimiento o lugar::</label><br></br>
@@ -169,11 +175,34 @@ export default function CreateShow() {
                                 <div className="btn-next-step">
                                     <input type="submit" value="Subir" />
                                 </div>
+                                <ul class="menu">
+                                    <li>
+                                    <a href="#slide1">1</a>
+                                    </li>
+                                    <li>
+                                    <a href="#slide2">2</a>
+                                    </li>
+                                    <li>
+                                    <a href="#slide3">3</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </form>
+                    <ul class="menu">
+                        <li>
+                        <a href="#slide1">1</a>
+                        </li>
+                        <li>
+                        <a href="#slide2">2</a>
+                        </li>
+                        <li>
+                        <a href="#slide3">3</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+            <Footer></Footer>
         </>
     )
 }

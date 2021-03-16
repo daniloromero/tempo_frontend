@@ -1,11 +1,210 @@
 
+.all {
+    padding: 25px 0px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(196, 196, 196);
+    height: 100%;
+}
 
+.content {
+    background: #fff;
+    width: 82%;
+    height: 90vh;
+    overflow-x: hidden;
+    padding: 30px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 5px #000;
+}
+
+.all .content .allForms .forms {
+    position: relative;
+    width: 800px;
+    height: 300px;
+}
+
+.all .content .allForms .forms .Shows {
+    background: #fff;
+    position: absolute;
+    margin-top: 0;
+    padding: 20px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 100%;
+    /* box-shadow: 1px 1px 5px 5px #000; */
+}
+
+.all .content .allForms .forms .Shows .componentShow {
+    display: flex;
+    flex-direction:column;
+    align-items:flex-end;
+    margin-right: 20vh;
+}
+
+.all .content .allForms .forms .Shows .componentShow h1 {
+    font-size: 30pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka One";
+    transition: all 300ms ease-in-out;
+    text-shadow: 1px -1px 1px rgb(196, 196, 196),
+                2px -2px 1px rgb(196, 196, 196),
+                3px -2px 1px rgb(196, 196, 196),
+                4px -3px 2px rgb(196, 196, 196),
+                5px -3px 2px rgb(196, 196, 196),
+                6px -3px 2px rgb(196, 196, 196),
+                7px -3px 3px rgb(196, 196, 196),
+                8px -4px 3px rgb(196, 196, 196),
+                9px -4px 3px rgb(196, 196, 196),
+                10px -4px 4px rgb(196, 196, 196);
+    margin-left: 10vh;
+}
+
+.all .content .allForms .forms .Shows .componentShow .div-inputs7 {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-right: -19vh;
+}
+
+.all .content .allForms .forms .Artist {
+    background: #fff;
+    position: absolute;
+    margin-top: -5vh;
+    padding: 80px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-left: 250vh;
+    height: 74vh;
+    border-radius: 10px;
+}
+
+.all .content .allForms .forms .Artist .div-inputs3 {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 30px;
+    margin-left: -5vh;
+}
+
+.all .content .allForms .forms .Venues {
+    background: #fff;
+    position: absolute;
+    margin-top: -5vh;
+    padding: 70px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 500vh;
+    height: 74vh;
+}
+
+/*--------------------*/
+
+/* .all .content .allForms .forms .Shows {
+    padding: 0;
+    margin: 0;
+}
+
+.all .content .allForms .forms .Artist {
+    padding: 0;
+    margin: 0;
+}
+
+.all .content .allForms .forms .Venues {
+    padding: 0;
+    margin: 0;
+} */
+
+/* .all .content .allForms .forms {
+    position: relative;
+    width: 800px;
+    height: 300px;
+}
+
+.all .content .allForms .forms .Shows{
+    position: absolute;
+    margin-top: 5vh;
+    padding: 20px;
+    margin-left: 45vh;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
+}
+
+.all .content .allForms .forms .Artist{
+    position: absolute;
+    margin-top: 5vh;
+    padding: 20px;
+    margin-left: 45vh;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
+}
+
+.all .content .allForms .forms .Venues{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
+} */
+
+.all .content .allForms .forms div:first-child {
+    opacity: 1;
+}
+
+.all .content .allForms .forms div:target {
+    opacity: 1;
+}
+
+.content .menu{
+    text-align: center;
+    margin: 20px;
+    margin-top: 22vh;
+}
+
+.content .menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.content .menu li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 100%;
+}
+
+
+/* 
 body{
     margin: 0px;
 }
 
 .all {
-    /* position: fixed; */
     padding: 25px 0px;
     display: flex;
     justify-content: center;
@@ -140,4 +339,4 @@ textarea {
 
 .label-file {
     text-align: center;
-}
+} */
