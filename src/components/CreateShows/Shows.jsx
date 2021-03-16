@@ -155,12 +155,10 @@ export default function CreateShow() {
                                 </div>
                                 <div className="div-inputs">
                                     <label htmlFor="ciudad"><b>*</b>Elige una Ciudad:</label>
-                                    <select required name="ciudad" value={ciudad} onChange={(e) => setciudad(e.target.value)} id="ciudad">
-                                        <option value="0">Seleccione una ciudad</option>
-                                        <option value="Bogota">Bogota</option>
+                                    <select name="ciudad" value={ciudad} onChange={(e) => setciudad(e.target.value)} id="ciudad" required>
+                                        <option value="">Seleccione una ciudad</option>
+                                        <option value="Bogotá">Bogotá</option>
                                         <option value="Medellín">Medellín</option>
-                                        <option value="Cali">Cali</option>
-                                        <option value="Cartagena">Cartagena</option>
                                     </select>
                                 </div>
                                 <div className="div-inputs">
