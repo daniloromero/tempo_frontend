@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import HeaderProfile from '../Profile/HeaderProfile'
 import Footer from '../Footer/index'
-
 import "../../styles/create-show.css"
 import { useHistory } from "react-router-dom";
 
@@ -85,121 +84,141 @@ export default function CreateShow() {
         <>
             <HeaderProfile></HeaderProfile>
             <div className="all">
+                <div className="principal-buttom">
+                    <a href="#content-show1">Crear Evento</a>
+                </div>
                 <div className="content">
-                    <form onSubmit={handleSubmit} className="allForms">
-                        <div className="title">
-                            <h2 className="titleP">Datos del evento</h2>
-                        </div>
-                        <div className="forms">
+                    <form onSubmit={handleSubmit} className="allFoms">
                             {/* CREAR SHOWS */}
-                            <div className="Shows" id="slide1">
-                                <div className="componentShow">
-                                    <h1>CREAR SHOW</h1>
-                                    <div className="div-inputs">
-                                        <label><b>*</b> Nombre del evento:</label><br></br>
-                                        <input className="inputs" onChange={handleChange} name="name_show" value={nameshow} type="text" placeholder="Nombre de el show" />
+                            <div className="content-shows" id="content-show1">
+                                <div className="steps">
+                                    <div className="content-step">
+                                        <div className="step-current">
+                                            <h4>Paso 1</h4>
+                                        </div>
+                                        <div>
+                                            <h4>Paso 2</h4>
+                                        </div>
+                                        <div>
+                                            <h4>Paso 3</h4>
+                                        </div>
                                     </div>
-                                    <div className="div-inputs">
-                                        <label><b>*</b> Precio Entrada</label><br></br>
-                                        <input className="inputs" type="text" name="precio" value={precio} onChange={handleChange} placeholder="Precio" />
+                                </div>
+                                <div className="info">
+                                    <div>
+                                        <h1>CREAR EVENTO</h1>
                                     </div>
-                                    <div className="div-inputs">
-                                        <label><b>*</b> Fecha:</label><br></br>
-                                        <input className="inputs" type="date" name="fecha" value={fecha} onChange={handleChange} />
+                                    <div className="content-inp">
+                                        <div className="div-inputs">
+                                            <label><b>*</b> Nombre del evento:</label><br></br>
+                                            <input required className="inputs" onChange={handleChange} name="name_show" value={nameshow} type="text" placeholder="Nombre de el show" />
+                                        </div>
+                                        <div className="div-inputs">
+                                            <label><b>*</b> Precio Entrada</label><br></br>
+                                            <input required className="inputs" type="text" name="precio" value={precio} onChange={handleChange} placeholder="Precio" />
+                                        </div>
+                                        <div className="div-inputs">
+                                            <label><b>*</b> Fecha:</label><br></br>
+                                            <input required className="inputs" type="date" name="fecha" value={fecha} onChange={handleChange} />
+                                        </div>
+                                        <div className="div-inputs">
+                                            <label><b>*</b> Hora:</label><br></br>
+                                            <input required className="inputs" name="hora" value={hora} type="time" onChange={handleChange} />
+                                        </div>
+                                        <div className="div-inputs">
+                                            <label><b>*</b> Descripción del evento:</label><br></br>
+                                            <textarea required placeholder="Haz una breve descripción de la tematica de tu show" name="descripcion_evento" value={descripcion} onChange={handleChange} className="inputs"></textarea>
+                                        </div>
                                     </div>
-                                    <div className="div-inputs">
-                                        <label><b>*</b> Hora:</label><br></br>
-                                        <input className="inputs" name="hora" value={hora} type="time" onChange={handleChange} />
-                                    </div>
-                                    <div className="div-inputs">
-                                        <label><b>*</b> Descripión del evento:</label><br></br>
-                                        <textarea placeholder="Haz una breve descripción de la tematica de tu show" name="descripcion_evento" value={descripcion} onChange={handleChange} className="inputs"></textarea>
-                                    </div>
-                                    <div className="div-inputs7">
-                                        <input type="file" className="upload-img" name="file" id="file" accept="image/png, image/jpeg image/jpg" />
-                                        <label className="label-file" htmlFor="file">Subir foto ⇪</label>
+                                    <div className="after-btn-next">
+                                        <a href="" className="cancelar">Cancelar</a>
+                                        <a href="#content-artist1" className="siguiente">Siguiente</a>
                                     </div>
                                 </div>
                             </div>
                             {/* CREAR ARTISTAS */}
-                            <div className="Artist" id="slide2">
-                                <h1>CREAR ARTISTA</h1>
-                                <div className="div-inputs1">
-                                    <label><b>*</b> Nombre del artista/Banda:</label><br></br>
-                                    <input className="inputs" name="name_artist" value={nombreArtista} onChange={(e) => setnombreArtista(e.target.value)} type="text" placeholder="Nombre del artista o banda" />
+                            <div className="content-artist" id="content-artist1">
+                                <div className="steps">
+                                    <div className="content-step">
+                                        <div>
+                                            <h4>Paso 1</h4>
+                                        </div>
+                                        <div className="step-current">
+                                            <h4>Paso 2</h4>
+                                        </div>
+                                        <div>
+                                            <h4>Paso 3</h4>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="div-inputs2">
-                                    <label><b>*</b> Género:</label><br></br>
-                                    <input className="inputs" type="text" name="genero" value={generoArtista} onChange={(e) => setgeneroArtista(e.target.value)} placeholder="Género del artista" />
+                                <div className="info">
+                                    <div>
+                                        <h1>CREAR ARTISTA</h1>
+                                    </div>
+                                    <div className="content-inp">
+                                        <div className="div-inputs">
+                                            <label><b>*</b> Nombre del artista/Banda:</label><br></br>
+                                            <input required className="inputs" name="name_artist" value={nombreArtista} onChange={(e) => setnombreArtista(e.target.value)} type="text" placeholder="Nombre del artista o banda" />
+                                        </div>
+                                        <div className="div-inputs">
+                                            <label><b>*</b> Género:</label><br></br>
+                                            <input required className="inputs" type="text" name="genero" value={generoArtista} onChange={(e) => setgeneroArtista(e.target.value)} placeholder="Género del artista" />
+                                        </div>
+                                    </div>
+                                    <div className="after-btn-next">
+                                        <a href="#content-show1" className="cancelar">Anterior</a>
+                                        <a href="#content-venue1" className="siguiente">Siguiente</a>
+                                    </div>
                                 </div>
-                                <div className="div-inputs3">
-                                    <input type="file" className="upload-img" name="file" id="file" accept="image/png, image/jpeg image/jpg" />
-                                    <label className="label-file" htmlFor="file">Subir foto ⇪</label>
-                                </div>
-                                <ul class="menu">
-                                    <li>
-                                    <a href="#slide1">1</a>
-                                    </li>
-                                    <li>
-                                    <a href="#slide2">2</a>
-                                    </li>
-                                    <li>
-                                    <a href="#slide3">3</a>
-                                    </li>
-                                </ul>
                             </div>
                             {/* CREAR LUGARES */}
-                            <div className="Venues"  id="slide3">
-                                <h1>CREAR LUGAR</h1>
-                                <div className="div-inputs">
-                                    <label><b>*</b> Nombre del establecimiento o lugar::</label><br></br>
-                                    <input className="inputs" name="nombre_lugar" value={nombre_lugar} onChange={(e) => setnombre_lugar(e.target.value)} type="text" placeholder="Nombre de tu establecimiento" />
+                            <div className="content-venue" id="content-venue1">
+                                <div className="steps">
+                                    <div className="content-step">
+                                        <div>
+                                            <h4>Paso 1</h4>
+                                        </div>
+                                        <div>
+                                            <h4>Paso 2</h4>
+                                        </div>
+                                        <div className="step-current">
+                                            <h4>Paso 3</h4>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="div-inputs">
-                                    <label><b>*</b>Dirección:</label><br></br>
-                                    <input className="inputs" type="text" name="direccion" value={direccion} onChange={(e) => setdireccion(e.target.value)} placeholder="Dirección del establecimiento" />
+                                <div className="info">
+                                    <div>
+                                        <h1>CREAR LUGAR</h1>
+                                    </div>
+                                    <div className="content-inp">
+                                        <div className="div-inputs">
+                                            <label><b>*</b> Nombre del establecimiento o lugar::</label><br></br>
+                                            <input required className="inputs" name="nombre_lugar" value={nombre_lugar} onChange={(e) => setnombre_lugar(e.target.value)} type="text" placeholder="Nombre de tu establecimiento" />
+                                        </div>
+                                        <div className="div-inputs">
+                                            <label><b>*</b>Dirección:</label><br></br>
+                                            <input required className="inputs" type="text" name="direccion" value={direccion} onChange={(e) => setdireccion(e.target.value)} placeholder="Dirección del establecimiento" />
+                                        </div>
+                                        <div className="div-inputs">
+                                            <label htmlFor="ciudad"><b>*</b>Elige una Ciudad:</label>
+                                            <select name="ciudad" value={ciudad} onChange={(e) => setciudad(e.target.value)} id="ciudad" required>
+                                                <option value="">Seleccione una ciudad</option>
+                                                <option value="Bogotá">Bogotá</option>
+                                                <option value="Medellín">Medellín</option>
+                                            </select>
+                                        </div>
+                                        <div className="div-inputs">
+                                            <label><b>*</b>Descripción de tu establecimiento:</label><br></br>
+                                            <textarea required name="descripcion_lugar" value={descripcion_lugar} onChange={(e) => setdescripcion_lugar(e.target.value)} className="inputs" placeholder="Escribe una breve descripcion del establecimiento"></textarea>
+                                        </div>
+                                    </div>
+                                    <div className="after-btn-next">
+                                        <a href="#content-artist1" className="cancelar">Anterior</a>
+                                        <input type="submit" value="Finalizar" />
+                                    </div>
                                 </div>
-                                <div className="div-inputs">
-                                    <label htmlFor="ciudad"><b>*</b>Elige una Ciudad:</label>
-                                    <select name="ciudad" value={ciudad} onChange={(e) => setciudad(e.target.value)} id="ciudad">
-                                        <option value="Bogotá">Bogotá</option>
-                                        <option value="Medellín">Medellín</option>
-                                        <option value="Cali">Cali</option>
-                                        <option value="Cartagena">Cartagena</option>
-                                    </select>
-                                </div>
-                                <div className="div-inputs">
-                                    <label><b>*</b>Descripción de tu establecimiento:</label><br></br>
-                                    <textarea name="descripcion_lugar" value={descripcion_lugar} onChange={(e) => setdescripcion_lugar(e.target.value)} className="inputs" placeholder="Escribe una breve descripcion del establecimiento"></textarea>
-                                </div>
-                                <div className="btn-next-step">
-                                    <input type="submit" value="Subir" />
-                                </div>
-                                <ul class="menu">
-                                    <li>
-                                    <a href="#slide1">1</a>
-                                    </li>
-                                    <li>
-                                    <a href="#slide2">2</a>
-                                    </li>
-                                    <li>
-                                    <a href="#slide3">3</a>
-                                    </li>
-                                </ul>
                             </div>
-                        </div>
                     </form>
-                    <ul class="menu">
-                        <li>
-                        <a href="#slide1">1</a>
-                        </li>
-                        <li>
-                        <a href="#slide2">2</a>
-                        </li>
-                        <li>
-                        <a href="#slide3">3</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
             <Footer></Footer>
