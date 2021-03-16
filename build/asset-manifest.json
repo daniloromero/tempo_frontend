@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0e198ba2.chunk.css",
+    "main.js": "/static/js/main.279aaafb.chunk.js",
+    "main.js.map": "/static/js/main.279aaafb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e1e57d13.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e1e57d13.js.map",
+    "static/css/2.b72ed2a0.chunk.css": "/static/css/2.b72ed2a0.chunk.css",
+    "static/js/2.eb345e7b.chunk.js": "/static/js/2.eb345e7b.chunk.js",
+    "static/js/2.eb345e7b.chunk.js.map": "/static/js/2.eb345e7b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.b72ed2a0.chunk.css.map": "/static/css/2.b72ed2a0.chunk.css.map",
+    "static/css/main.0e198ba2.chunk.css.map": "/static/css/main.0e198ba2.chunk.css.map",
+    "static/js/2.eb345e7b.chunk.js.LICENSE.txt": "/static/js/2.eb345e7b.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/static/media/outline-icons.ddae9b1b.woff",
+    "static/media/metronomoTempo2.007aad59.jpg": "/static/media/metronomoTempo2.007aad59.jpg",
+    "static/media/show1.e8148826.jpeg": "/static/media/show1.e8148826.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e1e57d13.js",
+    "static/css/2.b72ed2a0.chunk.css",
+    "static/js/2.eb345e7b.chunk.js",
+    "static/css/main.0e198ba2.chunk.css",
+    "static/js/main.279aaafb.chunk.js"
+  ]
+}
