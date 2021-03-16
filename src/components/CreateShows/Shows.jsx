@@ -103,23 +103,23 @@ export default function CreateShow() {
                                 <h1>CREAR SHOW</h1>
                                 <div className="div-inputs">
                                     <label><b>*</b> Nombre del evento:</label><br></br>
-                                    <input className="inputs" onChange={handleChange} name="name_show" value={nameshow} type="text" placeholder="Nombre de el show" />
+                                    <input required className="inputs" onChange={handleChange} name="name_show" value={nameshow} type="text" placeholder="Nombre de el show" />
                                 </div>
                                 <div className="div-inputs">
                                     <label><b>*</b> Precio Entrada</label><br></br>
-                                    <input className="inputs" type="text" name="precio" value={precio} onChange={handleChange} placeholder="Precio" />
+                                    <input required className="inputs" type="text" name="precio" value={precio} onChange={handleChange} placeholder="Precio" />
                                 </div>
                                 <div className="div-inputs">
                                     <label><b>*</b> Fecha:</label><br></br>
-                                    <input className="inputs" type="date" name="fecha" value={fecha} onChange={handleChange} />
+                                    <input required className="inputs" type="date" name="fecha" value={fecha} onChange={handleChange} />
                                 </div>
                                 <div className="div-inputs">
                                     <label><b>*</b> Hora:</label><br></br>
-                                    <input className="inputs" name="hora" value={hora} type="time" onChange={handleChange} />
+                                    <input required className="inputs" name="hora" value={hora} type="time" onChange={handleChange} />
                                 </div>
                                 <div className="div-inputs">
-                                    <label><b>*</b> Descripión del evento:</label><br></br>
-                                    <textarea placeholder="Haz una breve descripción de la tematica de tu show" name="descripcion_evento" value={descripcion} onChange={handleChange} className="inputs"></textarea>
+                                    <label><b>*</b> Descripción del evento:</label><br></br>
+                                    <textarea required placeholder="Haz una breve descripción de la tematica de tu show" name="descripcion_evento" value={descripcion} onChange={handleChange} className="inputs"></textarea>
                                 </div>
                                 <div className="div-inputs">
                                     <input type="file" className="upload-img" name="file" id="file" accept="image/png, image/jpeg image/jpg" />
@@ -131,11 +131,11 @@ export default function CreateShow() {
                                 <h1>CREAR ARTISTA</h1>
                                 <div className="div-inputs">
                                     <label><b>*</b> Nombre del artista/Banda:</label><br></br>
-                                    <input className="inputs" name="name_artist" value={nombreArtista} onChange={(e) => setnombreArtista(e.target.value)} type="text" placeholder="Nombre del artista o banda" />
+                                    <input required className="inputs" name="name_artist" value={nombreArtista} onChange={(e) => setnombreArtista(e.target.value)} type="text" placeholder="Nombre del artista o banda" />
                                 </div>
                                 <div className="div-inputs">
                                     <label><b>*</b> Género:</label><br></br>
-                                    <input className="inputs" type="text" name="genero" value={generoArtista} onChange={(e) => setgeneroArtista(e.target.value)} placeholder="Género del artista" />
+                                    <input required className="inputs" type="text" name="genero" value={generoArtista} onChange={(e) => setgeneroArtista(e.target.value)} placeholder="Género del artista" />
                                 </div>
                                 <div className="div-inputs">
                                     <input type="file" className="upload-img" name="file" id="file" accept="image/png, image/jpeg image/jpg" />
@@ -147,16 +147,17 @@ export default function CreateShow() {
                                 <h1>CREAR LUGAR</h1>
                                 <div className="div-inputs">
                                     <label><b>*</b> Nombre del establecimiento o lugar::</label><br></br>
-                                    <input className="inputs" name="nombre_lugar" value={nombre_lugar} onChange={(e) => setnombre_lugar(e.target.value)} type="text" placeholder="Nombre de tu establecimiento" />
+                                    <input required className="inputs" name="nombre_lugar" value={nombre_lugar} onChange={(e) => setnombre_lugar(e.target.value)} type="text" placeholder="Nombre de tu establecimiento" />
                                 </div>
                                 <div className="div-inputs">
                                     <label><b>*</b>Dirección:</label><br></br>
-                                    <input className="inputs" type="text" name="direccion" value={direccion} onChange={(e) => setdireccion(e.target.value)} placeholder="Dirección del establecimiento" />
+                                    <input required className="inputs" type="text" name="direccion" value={direccion} onChange={(e) => setdireccion(e.target.value)} placeholder="Dirección del establecimiento" />
                                 </div>
                                 <div className="div-inputs">
                                     <label htmlFor="ciudad"><b>*</b>Elige una Ciudad:</label>
-                                    <select name="ciudad" value={ciudad} onChange={(e) => setciudad(e.target.value)} id="ciudad">
-                                        <option value="Bogotá">Bogotá</option>
+                                    <select required name="ciudad" value={ciudad} onChange={(e) => setciudad(e.target.value)} id="ciudad">
+                                        <option value="0">Seleccione una ciudad</option>
+                                        <option value="Bogota">Bogota</option>
                                         <option value="Medellín">Medellín</option>
                                         <option value="Cali">Cali</option>
                                         <option value="Cartagena">Cartagena</option>
@@ -164,7 +165,7 @@ export default function CreateShow() {
                                 </div>
                                 <div className="div-inputs">
                                     <label><b>*</b>Descripción de tu establecimiento:</label><br></br>
-                                    <textarea name="descripcion_lugar" value={descripcion_lugar} onChange={(e) => setdescripcion_lugar(e.target.value)} className="inputs" placeholder="Escribe una breve descripcion del establecimiento"></textarea>
+                                    <textarea required name="descripcion_lugar" value={descripcion_lugar} onChange={(e) => setdescripcion_lugar(e.target.value)} className="inputs" placeholder="Escribe una breve descripcion del establecimiento"></textarea>
                                 </div>
                                 <div className="btn-next-step">
                                     <input type="submit" value="Subir" />
