@@ -4,6 +4,7 @@ import Artistas from './Artistas'
 import "../../assets/styles/components/grids.css"
 
 export default function Componente({ data, show, city_description }) {
+    console.log(show);
 
     return (
         <>

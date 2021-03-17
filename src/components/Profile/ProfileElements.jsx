@@ -99,12 +99,12 @@ export const ComponentSection1 = styled.div`
 `
 
 export const ComponentSection2 = styled.div`
-    width: 66%;
+    width: 30%;
     height: auto;
     overflow-x:hidden;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 1px 1px 3px 1px #000;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
     margin-left: 225px;
     margin-top: 50px;
     position: absolute;
@@ -112,7 +112,7 @@ export const ComponentSection2 = styled.div`
 `
 
 export const ContentH1 = styled.h1`
-    font-size: 40pt;
+    font-size: 25pt;
     font-weight: bold;
     position: relative;
     font-family: "Fredoka One";
