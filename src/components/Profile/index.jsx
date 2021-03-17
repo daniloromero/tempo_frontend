@@ -10,6 +10,7 @@ import {
     } from './ProfileElements'
 
 import metronomoTempo2 from '../../assets/static/metronomoTempo2.jpg'
+import tempo04 from '../../assets/static/tempo04.png'
 import HeaderProfile from './HeaderProfile'
 
 
@@ -140,13 +141,12 @@ export default function Tonto({ data }) {
         <div className="footer-content">
             <div className="content-all-f">
                 <div className="footer-img">
-                    asdcasdc
+                    <img src={tempo04}/>
                 </div>
                 <div className="footer-tagline">
-                    asdcasd
+                    <h3>Encuentra Tus Shows a Tempo</h3>
                 </div>
             </div>
-            dsajkfakdjf
         </div>
         </>
     )

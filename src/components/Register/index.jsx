@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import Header from '../Header';
 import Footer from '../Footer/index';
 
-import { ContainerHeader, ComponentFooter } from './LoginStyled'
-
 import "../../assets/styles/components/NavbarLogin.css";
 import { Navbar } from "./Navbar";
+
+import tempo04 from '../../assets/static/tempo04.png'
+import '../../assets/styles/components/Profile.css'
 
 
 const API = process.env.REACT_APP_API
@@ -44,8 +45,9 @@ export const Login = (props) => {
             });
     }
     return (
+        <>
+        <Header></Header>
         <div className="row p-4">
-            <ContainerHeader><Header></Header></ContainerHeader>
             <div className="content-login col-md-5">
                 <div className="container-nav">
                     <Navbar />
@@ -78,7 +80,17 @@ export const Login = (props) => {
                     <h1>{error}</h1>
                 </div>
             </div>
-            <ComponentFooter><Footer></Footer></ComponentFooter>
         </div>
+        <div className="footer-content">
+                <div className="content-all-f">
+                    <div className="footer-img">
+                        <img src={tempo04}/>
+                    </div>
+                    <div className="footer-tagline">
+                        <h3>Encuentra Tus Shows a Tempo</h3>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }
