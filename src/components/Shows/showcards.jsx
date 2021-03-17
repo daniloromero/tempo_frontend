@@ -8,14 +8,13 @@ export const ShowsRender = ({data}) => {
   let artists = data.map((artist) => (artist[1]))
   let venue = data.map((venue) => (venue[2]))
   let show = shows.map((sh) => (sh))
-  console.log(shows)
-  console.log(artists)
-  console.log(venue)
+  // console.log(shows)
+  // console.log(artists)
+  // console.log(venue)
 
   return (
     <div className="showscontainer">
-      <div><h1>Shows</h1></div>
-      <div className="showswrapper">    
+      <div className="showswrapper">
         {show.map((sh, index) => {
           return (
             <>
