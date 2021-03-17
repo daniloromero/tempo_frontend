@@ -15,17 +15,17 @@ export const ShowsRender2 = ({ data }) => {
             <>
               <div className="showcard">
                 <div className="cardvisible">
-                  <img src={Image1}></img>
+                  <img src={Image1} alt="image_tempo_icon"></img>
                   <div className="showinfo">
                     <h3 >{sh.name_show}</h3>
                     <p>Entrada: {sh.price_ticket}.<br></br>{sh.date.slice(0, 11)}</p>
-                    <a href={`#${sh.id}`} className="button-opn-popup">Ver mas</a>
+                    <a href={`#${sh.id}`} className="button-opn-popup">Ver más</a>
                   </div>
                 </div>
-                <div class="container-all" id={`${sh.id}`}>
+                <div className="container-all" id={`${sh.id}`}>
                   <div className="popup">
                     <div className="hiddenimg">
-                      <img src={Image1}></img>
+                      <img src={Image1} alt="image_tempo_icon"></img>
                     </div>
                     <div className="container-text">
                       <h4>Status</h4>
@@ -61,7 +61,7 @@ export const ShowsRender2 = ({ data }) => {
                         <p>{sh.price_ticket}</p>
                       </div>
                     </div>
-                    <a href="#" className="btn-close-popup">X</a>
+                    <button className="btn-close-popup">X</button>
                   </div>
                 </div>
               </div>

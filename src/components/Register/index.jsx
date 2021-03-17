@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import Header from '../Header';
-import Footer from '../Footer/index';
-
 import "../../assets/styles/components/NavbarLogin.css";
 import { Navbar } from "./Navbar";
-
 import tempo04 from '../../assets/static/tempo04.png'
 import '../../assets/styles/components/Profile.css'
 
@@ -33,12 +30,10 @@ export const Login = (props) => {
         }).then(response => response.json())
             .then(data => {
                 if (data.status !== 'Email not found' && data.status !== 'Invalid password') {
-                    // console.log(data);
                     props.history.push('/profile');
                 }
                 else
                     setError(data.status);
-                console.log('Success:', data.status);
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -46,45 +41,45 @@ export const Login = (props) => {
     }
     return (
         <>
-        <Header></Header>
-        <div className="row p-4">
-            <div className="content-login col-md-5">
-                <div className="container-nav">
-                    <Navbar />
-                </div>
-                <form onSubmit={handleSubmit} className="card card-body">
-                    <div className="form-group">
-                        <input
-                            type="email"
-                            onChange={event => setEmail(event.target.value)}
-                            value={email}
-                            className="form-control"
-                            placeholder="email"
-                            autoFocus
-                        />
+            <Header></Header>
+            <div className="row p-4">
+                <div className="content-login col-md-5">
+                    <div className="container-nav">
+                        <Navbar />
                     </div>
-                    <div className="form-group">
-                        <input
-                            type="password"
-                            onChange={event => setPassword(event.target.value)}
-                            value={password}
-                            className="form-control"
-                            placeholder="Contraseña"
-                        />
-                    </div>
-                    <button className="btn btn-primary btn-block">
-                        Iniciar Sesion
+                    <form onSubmit={handleSubmit} className="card card-body">
+                        <div className="form-group">
+                            <input
+                                type="email"
+                                onChange={event => setEmail(event.target.value)}
+                                value={email}
+                                className="form-control"
+                                placeholder="email"
+                                autoFocus
+                            />
+                        </div>
+                        <div className="form-group">
+                            <input
+                                type="password"
+                                onChange={event => setPassword(event.target.value)}
+                                value={password}
+                                className="form-control"
+                                placeholder="Contraseña"
+                            />
+                        </div>
+                        <button className="btn btn-primary btn-block">
+                            Iniciar Sesion
                     </button>
-                </form>
-                <div className="card card-body">
-                    <h1>{error}</h1>
+                    </form>
+                    <div className="card card-body">
+                        <h1>{error}</h1>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div className="footer-content">
+            <div className="footer-content">
                 <div className="content-all-f">
                     <div className="footer-img">
-                        <img src={tempo04}/>
+                        <img src={tempo04} alt="tempo" />
                     </div>
                     <div className="footer-tagline">
                         <h3>Encuentra Tus Shows a Tempo</h3>

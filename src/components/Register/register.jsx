@@ -1,14 +1,10 @@
 import React, { useState } from 'react'
 import Header from '../Header';
-import Footer from '../Footer/index';
-
 import tempo04 from '../../assets/static/tempo04.png'
 import '../../assets/styles/components/Profile.css'
 import { Navbar } from "./Navbar";
 
 const API = process.env.REACT_APP_API
-
-
 
 export const Register = (props) => {
 
@@ -35,7 +31,6 @@ export const Register = (props) => {
             function (response) {
                 if (response.status === 200)
                     props.history.push('/login')
-                console.log(response);
             }
         ).catch(
             (error) => console.log(error)
@@ -44,60 +39,60 @@ export const Register = (props) => {
 
     return (
         <>
-        <Header></Header>
-        <div className="row p-4">
-            <div className="content-login col-md-4">
-                <div className="container-nav">
-                    <Navbar />
-                </div>
-                <form onSubmit={handleSubmit} className="card card-body">
-                    <div className="form-group">
-                        <input
-                            type="text"
-                            onChange={e => setName(e.target.value)}
-                            value={name}
-                            className="form-control"
-                            placeholder="Nombre"
-                            autoFocus
-                        />
+            <Header></Header>
+            <div className="row p-4">
+                <div className="content-login col-md-4">
+                    <div className="container-nav">
+                        <Navbar />
                     </div>
-                    <div className="form-group">
-                        <input
-                            type="email"
-                            onChange={e => setEmail(e.target.value)}
-                            value={email}
-                            className="form-control"
-                            placeholder="Email"
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
-                            type="password"
-                            onChange={e => setPassword(e.target.value)}
-                            value={password}
-                            className="form-control"
-                            placeholder="Contraseña"
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
-                            type="password"
-                            onChange={e => setConfirmPassword(e.target.value)}
-                            value={confirmPassword}
-                            className="form-control"
-                            placeholder="Confirmar Contraseña"
-                        />
-                    </div>
-                    <button className="btn btn-primary btn-block">
-                        Registrarse
+                    <form onSubmit={handleSubmit} className="card card-body">
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                onChange={e => setName(e.target.value)}
+                                value={name}
+                                className="form-control"
+                                placeholder="Nombre"
+                                autoFocus
+                            />
+                        </div>
+                        <div className="form-group">
+                            <input
+                                type="email"
+                                onChange={e => setEmail(e.target.value)}
+                                value={email}
+                                className="form-control"
+                                placeholder="Email"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <input
+                                type="password"
+                                onChange={e => setPassword(e.target.value)}
+                                value={password}
+                                className="form-control"
+                                placeholder="Contraseña"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <input
+                                type="password"
+                                onChange={e => setConfirmPassword(e.target.value)}
+                                value={confirmPassword}
+                                className="form-control"
+                                placeholder="Confirmar Contraseña"
+                            />
+                        </div>
+                        <button className="btn btn-primary btn-block">
+                            Registrarse
                     </button>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div className="footer-content">
+            <div className="footer-content">
                 <div className="content-all-f">
                     <div className="footer-img">
-                        <img src={tempo04}/>
+                        <img src={tempo04} alt="icon-tempo" />
                     </div>
                     <div className="footer-tagline">
                         <h3>Encuentra Tus Shows a Tempo</h3>
