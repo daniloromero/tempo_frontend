@@ -61,7 +61,7 @@ export const ShowsRender2 = ({ data }) => {
                         <p>{sh.price_ticket}</p>
                       </div>
                     </div>
-                    <button className="btn-close-popup">X</button>
+                    <a href="#" className="btn-close-popup">X</a>
                   </div>
                 </div>
               </div>
