@@ -3,15 +3,10 @@ import React, { useState } from 'react'
 import Profile from './Profile'
 import '../../assets/styles/components/Profile.css'
 import NameOrganizer from './NameOrganizer'
-import {
-        ProfileContainer, InfoP, CardProfile, ImgContainer, UperContainer, ComponentImg,
-        ComponentName,  ComponentBody, ComponentSection1, ComponentSection2,
-        ContentH1, ContentNameH1, ContentName2H1, ContentProfile
-    } from './ProfileElements'
 
 import metronomoTempo2 from '../../assets/static/metronomoTempo2.jpg'
-import tempo04 from '../../assets/static/tempo04.png'
 import HeaderProfile from './HeaderProfile'
+import Footer from "../Footer/index";
 
 
 const API = process.env.REACT_APP_API
@@ -55,7 +50,7 @@ export default function Tonto({ data }) {
 
     return (
         <>
-         <HeaderProfile></HeaderProfile>
+        <HeaderProfile></HeaderProfile>
         <div className="container-body">
             <div className="banner">
                 <div className="profile">
@@ -138,16 +133,7 @@ export default function Tonto({ data }) {
                 </div>
             </div>
         </div>
-        <div className="footer-content">
-            <div className="content-all-f">
-                <div className="footer-img">
-                    <img src={tempo04}/>
-                </div>
-                <div className="footer-tagline">
-                    <h3>Encuentra Tus Shows a Tempo</h3>
-                </div>
-            </div>
-        </div>
+        <Footer></Footer>
         </>
     )
 }
