@@ -7,8 +7,7 @@ import Footer from './Footer/index';
 
 import { ShowsRender2 } from "./ShowsHome"
 import "../styles/title-home.css"
-import tempo04 from '../assets/static/tempo04.png'
-import '../assets/styles/components/Profile.css'
+
 
 const API = process.env.REACT_APP_API
 
@@ -32,17 +31,10 @@ export default function Home() {
                         <blockquote><font size="+7">Encuentra tus shows a TEMPO</font></blockquote>
                     </h1>
                 </div>
-                <ShowsRender2 data={data}></ShowsRender2>
-                <div className="footer-content">
-                    <div className="content-all-f">
-                        <div className="footer-img">
-                            <img src={tempo04}/>
-                        </div>
-                        <div className="footer-tagline">
-                            <h3>Encuentra Tus Shows a Tempo</h3>
-                        </div>
-                    </div>
+                <div className="container-cards-home">
+                    <ShowsRender2 data={data}></ShowsRender2>
                 </div>
+                <Footer></Footer>
             </>
         )
     }
