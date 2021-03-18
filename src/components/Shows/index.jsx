@@ -6,7 +6,6 @@ import Header from '../Header';
 import Footer from '../Footer/index';
 
 import { ShowsRender } from "./showcards"
-import video3 from '../../assets/static/video3.mp4'
 import '../../assets/styles/components/Shows.css'
 
 const API = process.env.REACT_APP_API;
@@ -21,7 +20,6 @@ export const Shows = () => {
     if (data) {
         return (
             <div className="wraper-img">
-                {/* <video src={video3} onLoadedMetadata="this.muted=true" autoPlay loop></video> */}
                 <div className="dark-wrapper">
                     <div className="mini-content">
                         <Header></Header>
