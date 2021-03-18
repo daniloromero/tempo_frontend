@@ -3,14 +3,9 @@ import useFetch from "../Hooks/Hooks"
 import Loading from "../Helpers/Loading"
 import Error from "../Helpers/Error"
 import Header from '../Header';
-<<<<<<< HEAD
-import tempo04 from '../../assets/static/tempo04.png'
 import '../../assets/styles/components/Profile.css'
-=======
-import Footer from '../Footer/index';
-
->>>>>>> fb3f8d91306cb59cf85774e8810148247073b5e3
 import { ShowsRender } from "./showcards"
+import tempo04 from "../../assets/static/tempo04.png"
 
 const API = process.env.REACT_APP_API;
 
@@ -24,7 +19,6 @@ export const Shows = () => {
     if (data) {
         return (
             <>
-<<<<<<< HEAD
                 <Header></Header>
                 <div className="wraper">
                     <ShowsRender data={data} key={Math.floor(Math.random() * 1000000)}></ShowsRender>
@@ -39,13 +33,6 @@ export const Shows = () => {
                         </div>
                     </div>
                 </div>
-=======
-            <Header></Header>
-            <div className="wraper">
-                <ShowsRender data={data} ></ShowsRender>
-            </div>
-            <Footer></Footer>
->>>>>>> fb3f8d91306cb59cf85774e8810148247073b5e3
             </>
         )
     }

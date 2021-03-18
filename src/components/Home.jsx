@@ -3,7 +3,9 @@ import useFetch from "./Hooks/Hooks"
 import Loading from "./Helpers/Loading"
 import Error from "./Helpers/Error"
 import Header from './Header';
+import Footer from "./Footer/index.js"
 import { ShowsRender2 } from "./ShowsHome"
+import tempo04 from "../assets/static/tempo04.png"
 import "../styles/title-home.css"
 
 
@@ -29,22 +31,7 @@ export default function Home() {
                         <blockquote><font size="+7">Encuentra tus shows a TEMPO</font></blockquote>
                     </h1>
                 </div>
-<<<<<<< HEAD
                 <ShowsRender2 data={data} key={Math.floor(Math.random() * 110000)}></ShowsRender2>
-                <div className="footer-content">
-                    <div className="content-all-f">
-                        <div className="footer-img">
-                            <img src={tempo04} alt="logo_tempo" />
-                        </div>
-                        <div className="footer-tagline">
-                            <h3>Encuentra Tus Shows a Tempo</h3>
-                        </div>
-                    </div>
-=======
-                <div className="container-cards-home">
-                    <ShowsRender2 data={data}></ShowsRender2>
->>>>>>> fb3f8d91306cb59cf85774e8810148247073b5e3
-                </div>
                 <Footer></Footer>
             </>
         )

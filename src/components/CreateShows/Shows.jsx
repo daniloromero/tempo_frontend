@@ -1,13 +1,7 @@
 import React, { useState } from 'react'
-import HeaderProfile from '../Profile/HeaderProfile'
-import "../../styles/create-show.css"
+import "../../styles/create-show-video.css"
 import { useHistory } from "react-router-dom";
-<<<<<<< HEAD
-import tempo04 from '../../assets/static/tempo04.png'
-=======
-import Footer from '../Footer';
-
->>>>>>> fb3f8d91306cb59cf85774e8810148247073b5e3
+import video from "../../styles/TEMPO.mp4";
 
 
 const API = process.env.REACT_APP_API
@@ -86,7 +80,7 @@ export default function CreateShow() {
     }
     return (
         <>
-            <HeaderProfile></HeaderProfile>
+            {/* <HeaderProfile></HeaderProfile> */}
             {/* <div className="all">
                 <div className="principal-buttom">
                     <a href="#content-show1">Crear Evento</a>
@@ -227,14 +221,14 @@ export default function CreateShow() {
                 <header>
                     <h2 className="logo-tempo">Tempo</h2>
                 </header>
-                <video id="videoBG" poster="poster.JPG" autoPlay muted loop>
-                    <source src="TEMPO.mp4" type="video/mp4" />
+                <video id="videoBG" autoPlay muted loop>
+                    <source src={video} type="video/mp4" />
                 </video>
                 <div className="text">
                     <div className="principal-buttom">
                         <a href="#content-show1">Crear mi show</a>
                     </div>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className="content-shows" id="content-show1">
                             <div className="info">
                                 <div>
@@ -243,28 +237,28 @@ export default function CreateShow() {
                                 <div className="content-inp">
                                     <div className="div-inputs">
                                         <label>Nombre del evento</label><br /><br />
-                                        <input required className="inputs-video" name="name_show" defaultValue="{nameshow}" type="text" placeholder="Nombre de el show" />
+                                        <input required className="inputs-video" onChange={handleChange} name="name_show" value={nameshow} type="text" placeholder="Nombre de el show" />
                                     </div>
                                     <div className="div-inputs">
                                         <label> Precio Entrada</label><br /><br />
-                                        <input required className="inputs-video" type="text" name="precio" defaultValue="{precio}" onchange="{handleChange}" placeholder="Precio" />
+                                        <input required className="inputs-video" type="text" name="precio" value={precio} onChange={handleChange} placeholder="Precio" />
                                     </div>
                                     <div className="div-inputs">
                                         <label> Fecha del Show</label><br /><br />
-                                        <input required className="inputs-video" type="date" name="fecha" defaultValue="{fecha}" onchange="{handleChange}" />
+                                        <input required className="inputs-video" type="date" name="fecha" value={fecha} onChange={handleChange} />
                                     </div>
                                     <div className="div-inputs">
                                         <label>Hora</label><br /><br />
-                                        <input required className="inputs-video" name="hora" defaultValue="{hora}" type="time" onchange="{handleChange}" />
+                                        <input required className="inputs-video" name="hora" value={hora} onChange={handleChange} type="time" />
                                     </div>
                                     <div className="div-inputs">
                                         <label> Descripción del evento</label><br /><br />
-                                        <textarea required placeholder="Haz una breve descripción de la tematica de tu show" name="descripcion_evento" value="{descripcion}" onchange="{handleChange}" className="inputs" defaultValue={""} />
+                                        <textarea required placeholder="Haz una breve descripción de la tematica de tu show" name="descripcion_evento" value={descripcion} onChange={handleChange} className="inputs" />
                                     </div>
                                 </div>
                                 <div className="container-buttons-tempo">
                                     <div className="after-btn-next">
-                                        <a href className="cancelar">Cancelar</a>
+                                        <a href="/profile" className="cancelar">Cancelar</a>
                                     </div>
                                     &nbsp;&nbsp;&nbsp;
                                     <div className="after-btn-next-a-next">
@@ -281,11 +275,11 @@ export default function CreateShow() {
                                 <div className="content-inp">
                                     <div className="div-inputs">
                                         <label>Nombre del artista/Banda</label><br /><br />
-                                        <input required className="inputs-video" name="name_artist" type="text" placeholder="Nombre del artista o banda" />
+                                        <input required className="inputs-video" type="text" name="name_artist" value={nombreArtista} onChange={(e) => setnombreArtista(e.target.value)} placeholder="Nombre del artista o banda" />
                                     </div>
                                     <div className="div-inputs">
                                         <label>Género</label><br /><br />
-                                        <input required className="inputs-video" type="text" placehoder="genero banda" name="genero" />
+                                        <input required className="inputs-video" type="text" value={generoArtista} onChange={(e) => setgeneroArtista(e.target.value)} placehoder="género banda" name="genero" />
                                     </div>
                                 </div>
                                 <div className="container-buttons-tempo">
@@ -308,17 +302,17 @@ export default function CreateShow() {
                                     <div className="div-inputs">
                                         <br />
                                         <label> Nombre del establecimiento o lugar</label><br /><br />
-                                        <input required className="inputs-video" name="nombre_lugar" type="text" placeholder="Nombre de tu establecimiento" />
+                                        <input required className="inputs-video" name="nombre_lugar" value={nombre_lugar} onChange={(e) => setnombre_lugar(e.target.value)} type="text" placeholder="Nombre de tu establecimiento" />
                                     </div>
                                     <div className="div-inputs">
                                         <br />
                                         <label>Dirección</label><br /><br />
-                                        <input required className="inputs-video" type="text" name="direccion" placeholder="Dirección del establecimiento" />
+                                        <input required className="inputs-video" type="text" name="direccion" value={direccion} onChange={(e) => setdireccion(e.target.value)} placeholder="Dirección del establecimiento" />
                                     </div>
                                     <div className="div-inputs">
                                         <label htmlfor="ciudad">Elige una Ciudad</label>
                                         <br /><br />
-                                        <select className="select-video" name="ciudad" id="ciudad" required>
+                                        <select className="select-video" name="ciudad" value={ciudad} onChange={(e) => setciudad(e.target.value)} required>
                                             <option value>Seleccione una ciudad</option>
                                             <option value="Bogotá">Bogotá</option>
                                             <option value="Medellín">Medellín</option>
@@ -327,7 +321,7 @@ export default function CreateShow() {
                                     <div className="div-inputs">
                                         <br />
                                         <label>Descripción de tu establecimiento</label><br /><br />
-                                        <textarea required name="descripcion_lugar" placeholder="Escribe una breve descripcion del establecimiento" defaultValue={""} />
+                                        <textarea required name="descripcion_lugar" value={descripcion_lugar} onChange={(e) => setdescripcion_lugar(e.target.value)} placeholder="Escribe una breve descripcion del establecimiento" />
                                     </div>
                                 </div>
                                 <div className="after-btn-next">
@@ -340,16 +334,6 @@ export default function CreateShow() {
                     </form>
                 </div>
             </section>
-            <div className="footer-content">
-                <div className="content-all-f">
-                    <div className="footer-img">
-                        <img src={tempo04} />
-                    </div>
-                    <div className="footer-tagline">
-                        <h3>Encuentra Tus Shows a Tempo</h3>
-                    </div>
-                </div>
-            </div>
         </>
     )
 }

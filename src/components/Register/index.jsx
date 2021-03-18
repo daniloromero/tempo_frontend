@@ -2,11 +2,8 @@ import React, { useState } from 'react'
 import Header from '../Header';
 import "../../assets/styles/components/NavbarLogin.css";
 import { Navbar } from "./Navbar";
-<<<<<<< HEAD
 import tempo04 from '../../assets/static/tempo04.png'
 import '../../assets/styles/components/Profile.css'
-=======
->>>>>>> fb3f8d91306cb59cf85774e8810148247073b5e3
 
 
 const API = process.env.REACT_APP_API
@@ -79,7 +76,6 @@ export const Login = (props) => {
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
             <div className="footer-content">
                 <div className="content-all-f">
                     <div className="footer-img">
@@ -90,10 +86,6 @@ export const Login = (props) => {
                     </div>
                 </div>
             </div>
-=======
-        </div>
-        <Footer></Footer>
->>>>>>> fb3f8d91306cb59cf85774e8810148247073b5e3
         </>
     );
 }
