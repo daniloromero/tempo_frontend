@@ -327,7 +327,7 @@ export default function CreateShow() {
                                 <div className="after-btn-next">
                                     <a href="#content-artist1" className="cancelar">Anterior</a>
                                     &nbsp;&nbsp;&nbsp;
-                                    <input type="submit" defaultValue="Finalizar" />
+                                    <input type="submit" value="Finalizar" />
                                 </div>
                             </div>
                         </div>
