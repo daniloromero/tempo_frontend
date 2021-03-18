@@ -2,9 +2,13 @@ import React, { useState } from 'react'
 import Profile from './Profile'
 import '../../assets/styles/components/Profile.css'
 import NameOrganizer from './NameOrganizer'
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb3f8d91306cb59cf85774e8810148247073b5e3
 import metronomoTempo2 from '../../assets/static/metronomoTempo2.jpg'
-import tempo04 from '../../assets/static/tempo04.png'
 import HeaderProfile from './HeaderProfile'
+import Footer from "../Footer/index";
 
 
 const API = process.env.REACT_APP_API
@@ -46,6 +50,7 @@ export default function Tonto({ data }) {
     console.log("soy el email", email)
     return (
         <>
+<<<<<<< HEAD
             <HeaderProfile></HeaderProfile>
             <div className="container-body">
                 <div className="banner">
@@ -55,6 +60,16 @@ export default function Tonto({ data }) {
                     <div className="name-organizer">
                         <h1>Bienvenido <NameOrganizer data={req[0]}></NameOrganizer></h1>
                     </div>
+=======
+        <HeaderProfile></HeaderProfile>
+        <div className="container-body">
+            <div className="banner">
+                <div className="profile">
+                    <img className="logotype" src={metronomoTempo2}/>
+                </div>
+                <div className="name-organizer">
+                    <h1>Bienvenido <NameOrganizer data={req[0]}></NameOrganizer></h1>
+>>>>>>> fb3f8d91306cb59cf85774e8810148247073b5e3
                 </div>
                 <div className="info-organizer">
                     <div className="container-info-organaizer">
@@ -120,6 +135,7 @@ export default function Tonto({ data }) {
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             <div className="footer-content">
                 <div className="content-all-f">
                     <div className="footer-img">
@@ -130,6 +146,10 @@ export default function Tonto({ data }) {
                     </div>
                 </div>
             </div>
+=======
+        </div>
+        <Footer></Footer>
+>>>>>>> fb3f8d91306cb59cf85774e8810148247073b5e3
         </>
     )
 }

@@ -2,7 +2,12 @@ import React, { useState } from 'react'
 import HeaderProfile from '../Profile/HeaderProfile'
 import "../../styles/create-show.css"
 import { useHistory } from "react-router-dom";
+<<<<<<< HEAD
 import tempo04 from '../../assets/static/tempo04.png'
+=======
+import Footer from '../Footer';
+
+>>>>>>> fb3f8d91306cb59cf85774e8810148247073b5e3
 
 
 const API = process.env.REACT_APP_API

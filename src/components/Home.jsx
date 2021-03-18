@@ -5,8 +5,7 @@ import Error from "./Helpers/Error"
 import Header from './Header';
 import { ShowsRender2 } from "./ShowsHome"
 import "../styles/title-home.css"
-import tempo04 from '../assets/static/tempo04.png'
-import '../assets/styles/components/Profile.css'
+
 
 const API = process.env.REACT_APP_API
 
@@ -30,6 +29,7 @@ export default function Home() {
                         <blockquote><font size="+7">Encuentra tus shows a TEMPO</font></blockquote>
                     </h1>
                 </div>
+<<<<<<< HEAD
                 <ShowsRender2 data={data} key={Math.floor(Math.random() * 110000)}></ShowsRender2>
                 <div className="footer-content">
                     <div className="content-all-f">
@@ -40,7 +40,12 @@ export default function Home() {
                             <h3>Encuentra Tus Shows a Tempo</h3>
                         </div>
                     </div>
+=======
+                <div className="container-cards-home">
+                    <ShowsRender2 data={data}></ShowsRender2>
+>>>>>>> fb3f8d91306cb59cf85774e8810148247073b5e3
                 </div>
+                <Footer></Footer>
             </>
         )
     }
