@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import HeaderProfile from '../Profile/HeaderProfile'
 import "../../styles/create-show.css"
 import { useHistory } from "react-router-dom";
-
 import tempo04 from '../../assets/static/tempo04.png'
-import '../../assets/styles/components/Profile.css'
 
 
 const API = process.env.REACT_APP_API
@@ -84,13 +82,12 @@ export default function CreateShow() {
     return (
         <>
             <HeaderProfile></HeaderProfile>
-            <div className="all">
+            {/* <div className="all">
                 <div className="principal-buttom">
                     <a href="#content-show1">Crear Evento</a>
                 </div>
                 <div className="content">
                     <form onSubmit={handleSubmit} className="allFoms">
-                        {/* CREAR SHOWS */}
                         <div className="content-shows" id="content-show1">
                             <div className="steps">
                                 <div className="content-step">
@@ -137,7 +134,6 @@ export default function CreateShow() {
                                 </div>
                             </div>
                         </div>
-                        {/* CREAR ARTISTAS */}
                         <div className="content-artist" id="content-artist1">
                             <div className="steps">
                                 <div className="content-step">
@@ -172,7 +168,6 @@ export default function CreateShow() {
                                 </div>
                             </div>
                         </div>
-                        {/* CREAR LUGARES */}
                         <div className="content-venue" id="content-venue1">
                             <div className="steps">
                                 <div className="content-step">
@@ -222,7 +217,124 @@ export default function CreateShow() {
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> */}
+            <section className="showcase">
+                <header>
+                    <h2 className="logo-tempo">Tempo</h2>
+                </header>
+                <video id="videoBG" poster="poster.JPG" autoPlay muted loop>
+                    <source src="TEMPO.mp4" type="video/mp4" />
+                </video>
+                <div className="text">
+                    <div className="principal-buttom">
+                        <a href="#content-show1">Crear mi show</a>
+                    </div>
+                    <form>
+                        <div className="content-shows" id="content-show1">
+                            <div className="info">
+                                <div>
+                                    <h1>CREAR EVENTO</h1>
+                                </div>
+                                <div className="content-inp">
+                                    <div className="div-inputs">
+                                        <label>Nombre del evento</label><br /><br />
+                                        <input required className="inputs-video" name="name_show" defaultValue="{nameshow}" type="text" placeholder="Nombre de el show" />
+                                    </div>
+                                    <div className="div-inputs">
+                                        <label> Precio Entrada</label><br /><br />
+                                        <input required className="inputs-video" type="text" name="precio" defaultValue="{precio}" onchange="{handleChange}" placeholder="Precio" />
+                                    </div>
+                                    <div className="div-inputs">
+                                        <label> Fecha del Show</label><br /><br />
+                                        <input required className="inputs-video" type="date" name="fecha" defaultValue="{fecha}" onchange="{handleChange}" />
+                                    </div>
+                                    <div className="div-inputs">
+                                        <label>Hora</label><br /><br />
+                                        <input required className="inputs-video" name="hora" defaultValue="{hora}" type="time" onchange="{handleChange}" />
+                                    </div>
+                                    <div className="div-inputs">
+                                        <label> Descripción del evento</label><br /><br />
+                                        <textarea required placeholder="Haz una breve descripción de la tematica de tu show" name="descripcion_evento" value="{descripcion}" onchange="{handleChange}" className="inputs" defaultValue={""} />
+                                    </div>
+                                </div>
+                                <div className="container-buttons-tempo">
+                                    <div className="after-btn-next">
+                                        <a href className="cancelar">Cancelar</a>
+                                    </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <div className="after-btn-next-a-next">
+                                        <a href="#content-artist1" className="siguiente">Siguiente</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="content-artist" id="content-artist1">
+                            <div className="info">
+                                <div>
+                                    <h1>CREAR ARTISTA</h1>
+                                </div>
+                                <div className="content-inp">
+                                    <div className="div-inputs">
+                                        <label>Nombre del artista/Banda</label><br /><br />
+                                        <input required className="inputs-video" name="name_artist" type="text" placeholder="Nombre del artista o banda" />
+                                    </div>
+                                    <div className="div-inputs">
+                                        <label>Género</label><br /><br />
+                                        <input required className="inputs-video" type="text" placehoder="genero banda" name="genero" />
+                                    </div>
+                                </div>
+                                <div className="container-buttons-tempo">
+                                    <div className="after-btn-next-a-before">
+                                        <a href="#content-show1" className="cancelar">Anterior</a>
+                                    </div>
+                                &nbsp;&nbsp;&nbsp;
+                                <div className="after-btn-next-a-next">
+                                        <a href="#content-venue1" className="siguiente">Siguiente</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="content-venue" id="content-venue1">
+                            <div className="info">
+                                <div>
+                                    <h1>CREAR LUGAR</h1>
+                                </div>
+                                <div className="content-inp">
+                                    <div className="div-inputs">
+                                        <br />
+                                        <label> Nombre del establecimiento o lugar</label><br /><br />
+                                        <input required className="inputs-video" name="nombre_lugar" type="text" placeholder="Nombre de tu establecimiento" />
+                                    </div>
+                                    <div className="div-inputs">
+                                        <br />
+                                        <label>Dirección</label><br /><br />
+                                        <input required className="inputs-video" type="text" name="direccion" placeholder="Dirección del establecimiento" />
+                                    </div>
+                                    <div className="div-inputs">
+                                        <label htmlfor="ciudad">Elige una Ciudad</label>
+                                        <br /><br />
+                                        <select className="select-video" name="ciudad" id="ciudad" required>
+                                            <option value>Seleccione una ciudad</option>
+                                            <option value="Bogotá">Bogotá</option>
+                                            <option value="Medellín">Medellín</option>
+                                        </select>
+                                    </div>
+                                    <div className="div-inputs">
+                                        <br />
+                                        <label>Descripción de tu establecimiento</label><br /><br />
+                                        <textarea required name="descripcion_lugar" placeholder="Escribe una breve descripcion del establecimiento" defaultValue={""} />
+                                    </div>
+                                </div>
+                                <div className="after-btn-next">
+                                    <a href="#content-artist1" className="cancelar">Anterior</a>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <input type="submit" defaultValue="Finalizar" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
             <div className="footer-content">
                 <div className="content-all-f">
                     <div className="footer-img">
