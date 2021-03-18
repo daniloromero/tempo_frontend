@@ -19,6 +19,11 @@
     z-index:2;;
 }
 
+.header-profile {
+    z-index:300000;
+    position: absolute;
+}
+
 .showcase header {
     position: fixed;
     background: rgba(0, 0, 0, 0.6);

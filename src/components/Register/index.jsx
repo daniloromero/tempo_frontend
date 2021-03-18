@@ -1,9 +1,6 @@
-import React, { useState } from 'react'
-import Header from '../Header';
-import "../../assets/styles/components/NavbarLogin.css";
-import { Navbar } from "./Navbar";
-import tempo04 from '../../assets/static/tempo04.png'
-import '../../assets/styles/components/Profile.css'
+import React, { useState } from 'react';
+import "../../styles/login.css"
+import Header from '../Headers/header';
 
 
 const API = process.env.REACT_APP_API
@@ -42,48 +39,38 @@ export const Login = (props) => {
     return (
         <>
             <Header></Header>
-            <div className="row p-4">
-                <div className="content-login col-md-5">
-                    <div className="container-nav">
-                        <Navbar />
-                    </div>
-                    <form onSubmit={handleSubmit} className="card card-body">
-                        <div className="form-group">
+            <div class="image-container-login">
+                <section class="container-login-tempo">
+                    <form onSubmit={handleSubmit}>
+                        <div>
+                            <label><strong>Email</strong></label><br />
                             <input
-                                type="email"
                                 onChange={event => setEmail(event.target.value)}
                                 value={email}
-                                className="form-control"
-                                placeholder="email"
-                                autoFocus
-                            />
+                                class="inputs-tempo-login" type="email"
+                                placeholder="ingresa tu correo" autoFocus />
                         </div>
-                        <div className="form-group">
+                        <div>
+                            <label><strong>Contraseña</strong></label><br />
                             <input
+                                class="inputs-tempo-login"
                                 type="password"
                                 onChange={event => setPassword(event.target.value)}
                                 value={password}
-                                className="form-control"
-                                placeholder="Contraseña"
-                            />
+                                placeholder="ingresa tu contraseña" />
                         </div>
-                        <button className="btn btn-primary btn-block">
-                            Iniciar Sesion
-                    </button>
+                        <div class="button-container-tempo">
+                            <button class="boton-login-tempo">
+                                Iniciar Sesión
+                        </button>
+                        </div>
                     </form>
-                    <div className="card card-body">
-                        <h1>{error}</h1>
+                    <div>
+                        <h1 style={{ alignItems: "center", textAlign: "center" }}>{error}</h1>
                     </div>
-                </div>
-            </div>
-            <div className="footer-content">
-                <div className="content-all-f">
-                    <div className="footer-img">
-                        <img src={tempo04} alt="tempo" />
-                    </div>
-                    <div className="footer-tagline">
-                        <h3>Encuentra Tus Shows a Tempo</h3>
-                    </div>
+                </section>
+                <div class="footer-login">
+                    <h1>soy el footer</h1>
                 </div>
             </div>
         </>

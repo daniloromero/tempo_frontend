@@ -2,11 +2,9 @@ import React from 'react'
 import useFetch from "./Hooks/Hooks"
 import Loading from "./Helpers/Loading"
 import Error from "./Helpers/Error"
-import Header from './Header';
+import Header from "./Headers/header";
 import Footer from "./Footer/index.js"
 import { ShowsRender2 } from "./ShowsHome"
-import tempo04 from "../assets/static/tempo04.png"
-import "../styles/title-home.css"
 
 
 const API = process.env.REACT_APP_API

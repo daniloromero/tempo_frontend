@@ -2,7 +2,7 @@ import React from 'react'
 import useFetch from "../Hooks/Hooks"
 import Loading from "../Helpers/Loading"
 import Error from "../Helpers/Error"
-import Header from '../Header';
+import Header from '../Headers/header';
 import '../../assets/styles/components/Profile.css'
 import { ShowsRender } from "./showcards"
 import tempo04 from "../../assets/static/tempo04.png"

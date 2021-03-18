@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import Header from '../Header';
-import tempo04 from '../../assets/static/tempo04.png'
-import '../../assets/styles/components/Profile.css'
-import { Navbar } from "./Navbar";
+import Header from '../Headers/header';
+import "../../assets/styles/components/register.css"
+
 
 const API = process.env.REACT_APP_API
 
@@ -39,63 +38,62 @@ export const Register = (props) => {
 
     return (
         <>
-            <Header></Header>
-            <div className="row p-4">
-                <div className="content-login col-md-4">
-                    <div className="container-nav">
-                        <Navbar />
-                    </div>
-                    <form onSubmit={handleSubmit} className="card card-body">
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                onChange={e => setName(e.target.value)}
-                                value={name}
-                                className="form-control"
-                                placeholder="Nombre"
-                                autoFocus
-                            />
+            <div className="image-container-register">
+                <Header></Header>
+                <div id="registro" className="registrar">
+                    <div className="inner">
+                        <div className="rcont">
+                            <h2>
+                                REGISTRATE
+                        </h2>
+                            <form onSubmit={handleSubmit} className="form_reg">
+                                <ol>
+                                    <li>
+                                        <label>NOMBRE</label>
+                                        <input
+                                            type="text"
+                                            placeholder="NOMBRE"
+                                            onChange={e => setName(e.target.value)}
+                                            value={name}
+                                            required
+                                        />
+                                    </li>
+                                    <li>
+                                        <label>EMAIL</label>
+                                        <input
+                                            type="text"
+                                            placeholder="EMAIL"
+                                            onChange={e => setEmail(e.target.value)}
+                                            value={email}
+                                            required
+                                        />
+                                    </li>
+                                    <li>
+                                        <label>CONTRASEÑA</label>
+                                        <input
+                                            placeholder="CONTRASEÑA"
+                                            type="password"
+                                            onChange={e => setPassword(e.target.value)}
+                                            value={password}
+                                            required />
+                                    </li>
+                                    <li>
+                                        <label>CONFIRMAR CONTRASEÑA</label>
+                                        <input
+                                            type="password"
+                                            placeholder="CONFIRMAR CONTRASEÑA"
+                                            onChange={e => setConfirmPassword(e.target.value)}
+                                            value={confirmPassword}
+                                            required />
+                                    </li>
+                                    <li>
+                                        <button type="submit" className="btn-signup">
+                                            CREAR CUENTA
+                                    </button>
+                                    </li>
+                                </ol>
+                            </form>
                         </div>
-                        <div className="form-group">
-                            <input
-                                type="email"
-                                onChange={e => setEmail(e.target.value)}
-                                value={email}
-                                className="form-control"
-                                placeholder="Email"
-                            />
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="password"
-                                onChange={e => setPassword(e.target.value)}
-                                value={password}
-                                className="form-control"
-                                placeholder="Contraseña"
-                            />
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="password"
-                                onChange={e => setConfirmPassword(e.target.value)}
-                                value={confirmPassword}
-                                className="form-control"
-                                placeholder="Confirmar Contraseña"
-                            />
-                        </div>
-                        <button className="btn btn-primary btn-block">
-                            Registrarse
-                    </button>
-                    </form>
-                </div>
-            </div>
-            <div className="footer-content">
-                <div className="content-all-f">
-                    <div className="footer-img">
-                        <img src={tempo04} alt="icon-tempo" />
-                    </div>
-                    <div className="footer-tagline">
-                        <h3>Encuentra Tus Shows a Tempo</h3>
                     </div>
                 </div>
             </div>

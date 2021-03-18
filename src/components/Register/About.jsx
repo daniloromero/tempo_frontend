@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../Header'
 import Footer from '../Footer/index';
 
 import { ComponentFooter, ContainerHeader1 } from './LoginStyled'
@@ -8,7 +7,6 @@ import { Navbar } from "./Navbar";
 
 export const About = () => (
     <div className="container-fluid">
-        <ContainerHeader1><Header></Header></ContainerHeader1>
         <div className="container-fluid p-4">
             <Navbar />
         </div>

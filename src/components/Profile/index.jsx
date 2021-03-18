@@ -3,7 +3,7 @@ import Profile from './Profile'
 import '../../assets/styles/components/Profile.css'
 import NameOrganizer from './NameOrganizer'
 import metronomoTempo2 from '../../assets/static/metronomoTempo2.jpg'
-import HeaderProfile from './HeaderProfile'
+import HeaderProfile from '../Headers/header-profile';
 import Footer from "../Footer/index";
 import tempo04 from "../../assets/static/tempo04.png"
 
