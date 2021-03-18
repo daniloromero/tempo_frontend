@@ -33,8 +33,6 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 5));
 }
 
-/* <video src={video1} onLoadedMetadata="this.muted=true" autoPlay loop></video> */
-
 .mini-content {
     /* background: #fff; */
     /* background: url('../../static/miamigallery2019.png') no-repeat center center fixed; */
