@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import HeaderProfile from '../Profile/HeaderProfile'
-import "../../styles/create-show.css"
 import { useHistory } from "react-router-dom";
 import Footer from '../Footer';
 

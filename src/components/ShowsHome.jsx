@@ -1,5 +1,5 @@
 import Image1 from '../assets/images/show1.jpeg'
-import '../styles/popup_styles.css'
+import './Shows/popup_styles.css'
 
 export const ShowsRender2 = ({ data }) => {
   let shows = data.map((show) => (show[0]))
@@ -8,7 +8,7 @@ export const ShowsRender2 = ({ data }) => {
   let show = shows.map((sh) => (sh))
   return (
     <div className="showscontainer">
-      <div><h1>Eventos para este Mes</h1></div>
+      <div><h1>Eventos próximos 30 días</h1></div>
       <div className="showswrapper">
         {show.map((sh, index) => {
           return (
