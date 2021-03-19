@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
-import Header from '../Header';
-import Footer from '../Footer/index';
+import Header from '../Headers/header';
+import "../../assets/styles/components/register.css"
 
-import { Navbar } from "./Navbar";
-import { ContainerHeader, ComponentFooter } from './LoginStyled'
 
 const API = process.env.REACT_APP_API
-
-
 
 export const Register = (props) => {
 
@@ -34,7 +30,6 @@ export const Register = (props) => {
             function (response) {
                 if (response.status === 200)
                     props.history.push('/login')
-                console.log(response);
             }
         ).catch(
             (error) => console.log(error)
@@ -42,56 +37,66 @@ export const Register = (props) => {
     }
 
     return (
-        <div className="row p-4">
-            <ContainerHeader><Header></Header></ContainerHeader>
-            <div className="container-fluid">
-                <Navbar />
+        <>
+            <div className="image-container-register">
+                <Header></Header>
+                <div id="registro" className="registrar">
+                    <div className="inner">
+                        <div className="rcont">
+                            <h2>
+                                REGISTRATE
+                        </h2>
+                            <form onSubmit={handleSubmit} className="form_reg">
+                                <ol>
+                                    <li>
+                                        <label>NOMBRE</label>
+                                        <input
+                                            type="text"
+                                            placeholder="NOMBRE"
+                                            onChange={e => setName(e.target.value)}
+                                            value={name}
+                                            required
+                                        />
+                                    </li>
+                                    <li>
+                                        <label>EMAIL</label>
+                                        <input
+                                            type="text"
+                                            placeholder="EMAIL"
+                                            onChange={e => setEmail(e.target.value)}
+                                            value={email}
+                                            required
+                                        />
+                                    </li>
+                                    <li>
+                                        <label>CONTRASEÑA</label>
+                                        <input
+                                            placeholder="CONTRASEÑA"
+                                            type="password"
+                                            onChange={e => setPassword(e.target.value)}
+                                            value={password}
+                                            required />
+                                    </li>
+                                    <li>
+                                        <label>CONFIRMAR CONTRASEÑA</label>
+                                        <input
+                                            type="password"
+                                            placeholder="CONFIRMAR CONTRASEÑA"
+                                            onChange={e => setConfirmPassword(e.target.value)}
+                                            value={confirmPassword}
+                                            required />
+                                    </li>
+                                    <li>
+                                        <button type="submit" className="btn-signup">
+                                            CREAR CUENTA
+                                    </button>
+                                    </li>
+                                </ol>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="col-md-4">
-                <form onSubmit={handleSubmit} className="card card-body">
-                    <div className="form-group">
-                        <input
-                            type="text"
-                            onChange={e => setName(e.target.value)}
-                            value={name}
-                            className="form-control"
-                            placeholder="Nombre"
-                            autoFocus
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
-                            type="email"
-                            onChange={e => setEmail(e.target.value)}
-                            value={email}
-                            className="form-control"
-                            placeholder="Email"
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
-                            type="password"
-                            onChange={e => setPassword(e.target.value)}
-                            value={password}
-                            className="form-control"
-                            placeholder="Contraseña"
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
-                            type="password"
-                            onChange={e => setConfirmPassword(e.target.value)}
-                            value={confirmPassword}
-                            className="form-control"
-                            placeholder="Confirmar Contraseña"
-                        />
-                    </div>
-                    <button className="btn btn-primary btn-block">
-                        Registrarse
-                    </button>
-                </form>
-            </div>
-            <ComponentFooter><Footer></Footer></ComponentFooter>
-        </div>
+        </>
     );
 }

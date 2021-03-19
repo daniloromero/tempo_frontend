@@ -1,15 +1,10 @@
 import React, { useState } from 'react'
-// import DataOrganizer from './DataOrganizer'
 import Profile from './Profile'
+import '../../assets/styles/components/Profile.css'
 import NameOrganizer from './NameOrganizer'
-import {
-        ProfileContainer, InfoP, CardProfile, ImgContainer, UperContainer, ComponentImg,
-        ComponentName,  ComponentBody, ComponentSection1, ComponentSection2,
-        ContentH1, ContentNameH1, ContentName2H1, ContentProfile
-    } from './ProfileElements'
-
 import metronomoTempo2 from '../../assets/static/metronomoTempo2.jpg'
-import HeaderProfile from './HeaderProfile'
+import HeaderProfile from '../Headers/header-profile';
+import Footer from "../Footer/index";
 
 
 const API = process.env.REACT_APP_API
@@ -17,15 +12,14 @@ const API = process.env.REACT_APP_API
 export default function Tonto({ data }) {
 
     const req = Object.entries(data);
+    console.log(req[0])
 
-
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
+    const [name] = useState('');
+    const [email] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [nameID, setNameID] = useState(req[0].map((element) => JSON.stringify(element[0].names_organizer)))
-    const [nameEmail, setNameEmail] = useState(req[0].map((element) => JSON.stringify(element[0].email)))
-    const [nameFecha, setNameFecha] = useState(req[0].map((element) => JSON.stringify(element[0].created_at)))
+    const [nameID, setnameID] = useState(req[0].map((element) => (element[0].names_organizer)))
+    const [nameEmail, setemail] = useState(req[0].map((element) => (element[0].email)))
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -43,101 +37,91 @@ export default function Tonto({ data }) {
         }).then(
             function (response) {
                 if (response.status === 200)
-                    // props.history.push('/login')
                     console.log(response);
             }
         ).catch(
             (error) => console.log(error)
         )
     }
-
+    console.log("soy el email", email)
     return (
-        <div className="wraper">
-            <HeaderProfile></HeaderProfile>
-            <ProfileContainer>
-                <InfoP>
-                    <CardProfile>
-                        <UperContainer />
-                        <ComponentImg>
-                            <ImgContainer src={metronomoTempo2}/>
-                            <ComponentName>
-                                <ContentNameH1>
-                                    <NameOrganizer data={req[0]}></NameOrganizer>
-                                </ContentNameH1>
-                            </ComponentName>
-                        </ComponentImg>
-                    </CardProfile>
-                </InfoP>
-            </ProfileContainer>
-            <div>
-            <ComponentBody>
-                <ComponentSection1>
-                    <ContentName2H1>Mis Eventos</ContentName2H1>
-                    <ContentProfile>
-                        <Profile data={data}></Profile>
-                    </ContentProfile>
-                </ComponentSection1>
-                <ComponentSection2>
-                    <ContentH1>Actualizar Mis Datos</ContentH1>
-                    <div className="row p-4">
-                        <div className="container-fluid">
+        <div className="container-body">
+            <div className="content-dark-body">
+                <HeaderProfile></HeaderProfile>
+                <div className="banner">
+                    <section className="parallax2" id="section2">
+                        <div className="img-div">
+                            <img className="logotype" src={metronomoTempo2} />
                         </div>
-                        <div className="col-md-12">
-                            <form onSubmit={handleSubmit} className="card card-body">
-                                <div className="form-group">
-                                    <input
-                                        type="text"
-                                        onChange={e => setName(e.target.value)}
-                                        value={name}
-                                        className="form-control"
-                                        placeholder={nameID}
-                                        autoFocus
-                                    />
+                    </section>
+                    <div className="name-organizer">
+                        <h1>Bienvenido <NameOrganizer data={req[0]}></NameOrganizer></h1>
+                    </div>
+                </div>
+                <div className="info-organizer">
+                    <div className="container-info-organaizer">
+                        <div className="section-data">
+                            <div className="content-all-data">
+                                <div className="title1">
+                                    <h2>Actualizar Mis Datos</h2>
                                 </div>
-                                <div className="form-group">
-                                    <input
-                                        type="email"
-                                        onChange={e => setEmail(e.target.value)}
-                                        value={email}
-                                        className="form-control"
-                                        placeholder={nameEmail}
-                                    />
+                                <div className="row p-4">
+                                    <div className="col-md-12">
+                                        <form onSubmit={handleSubmit} className="card card-body">
+                                            <div className="content-inp-form">
+                                                <input
+                                                    type="text"
+                                                    onChange={e => setnameID(e.target.value)}
+                                                    value={nameID}
+                                                    className="form-control"
+                                                    placeholder={nameID}
+                                                    autoFocus
+                                                />
+                                            </div>
+                                            <div className="content-inp-form">
+                                                <input
+                                                    type="email"
+                                                    onChange={e => setemail(e.target.value)}
+                                                    value={nameEmail}
+                                                    placeholder={nameEmail}
+                                                    className="form-control"
+                                                />
+                                            </div>
+                                            <div className="content-inp-form">
+                                                <input
+                                                    type="password"
+                                                    onChange={e => setPassword(e.target.value)}
+                                                    value={password}
+                                                    className="form-control"
+                                                    placeholder="Contraseña Actual"
+                                                />
+                                            </div>
+                                            <div className="content-inp-form">
+                                                <input
+                                                    type="password"
+                                                    onChange={e => setConfirmPassword(e.target.value)}
+                                                    value={confirmPassword}
+                                                    className="form-control"
+                                                    placeholder="Nueva Contraseña"
+                                                />
+                                            </div>
+                                            <div className="content-inp-form">
+                                                <input type="submit" value="Actualizar" />
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                                <div className="form-group">
-                                    <input
-                                        type="text"
-                                        onChange={e => setPassword(e.target.value)}
-                                        value={password}
-                                        className="form-control"
-                                        placeholder={nameFecha}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <input
-                                        type="password"
-                                        onChange={e => setPassword(e.target.value)}
-                                        value={password}
-                                        className="form-control"
-                                        placeholder="Contraseña"
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <input
-                                        type="password"
-                                        onChange={e => setConfirmPassword(e.target.value)}
-                                        value={confirmPassword}
-                                        className="form-control"
-                                        placeholder="Confirmar Contraseña"
-                                    />
-                                </div>
-                                <button className="btn btn-primary btn-block">
-                                    Actualizar
-                                </button>
-                                </form>
                             </div>
                         </div>
-                    </ComponentSection2>
-                </ComponentBody>
+                        <div className="section-cards">
+                            <div className="title2">
+                                <h2>Mis Eventos</h2>
+                            </div>
+                            <Profile data={data}></Profile>
+                        </div>
+                    </div>
+                </div>
+                <Footer></Footer>
             </div>
         </div>
     )

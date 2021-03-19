@@ -1,11 +1,6 @@
-import React, { useState } from 'react'
-import Header from '../Header';
-import Footer from '../Footer/index';
-
-import { ContainerHeader, ComponentFooter } from './LoginStyled'
-
-import "../../assets/styles/components/NavbarLogin.css";
-import { Navbar } from "./Navbar";
+import React, { useState } from 'react';
+import "../../styles/login.css"
+import Header from '../Headers/header';
 
 
 const API = process.env.REACT_APP_API
@@ -32,53 +27,52 @@ export const Login = (props) => {
         }).then(response => response.json())
             .then(data => {
                 if (data.status !== 'Email not found' && data.status !== 'Invalid password') {
-                    // console.log(data);
                     props.history.push('/profile');
                 }
                 else
                     setError(data.status);
-                console.log('Success:', data.status);
             })
             .catch((error) => {
                 console.error('Error:', error);
             });
     }
     return (
-        <div className="row p-4">
-            <ContainerHeader><Header></Header></ContainerHeader>
-            <div className="container-fluid">
-                <Navbar />
-            </div>
-            <div className="col-md-5">
-                <form onSubmit={handleSubmit} className="card card-body">
-                    <div className="form-group">
-                        <input
-                            type="email"
-                            onChange={event => setEmail(event.target.value)}
-                            value={email}
-                            className="form-control"
-                            placeholder="email"
-                            autoFocus
-                        />
+        <>
+            <Header></Header>
+            <div class="image-container-login">
+                <section class="container-login-tempo">
+                    <form onSubmit={handleSubmit}>
+                        <div>
+                            <label><strong>Email</strong></label><br />
+                            <input
+                                onChange={event => setEmail(event.target.value)}
+                                value={email}
+                                class="inputs-tempo-login" type="email"
+                                placeholder="ingresa tu correo" autoFocus />
+                        </div>
+                        <div>
+                            <label><strong>Contraseña</strong></label><br />
+                            <input
+                                class="inputs-tempo-login"
+                                type="password"
+                                onChange={event => setPassword(event.target.value)}
+                                value={password}
+                                placeholder="ingresa tu contraseña" />
+                        </div>
+                        <div class="button-container-tempo">
+                            <button class="boton-login-tempo">
+                                Iniciar Sesión
+                        </button>
+                        </div>
+                    </form>
+                    <div>
+                        <h1 style={{ alignItems: "center", textAlign: "center" }}>{error}</h1>
                     </div>
-                    <div className="form-group">
-                        <input
-                            type="password"
-                            onChange={event => setPassword(event.target.value)}
-                            value={password}
-                            className="form-control"
-                            placeholder="Contraseña"
-                        />
-                    </div>
-                    <button className="btn btn-primary btn-block">
-                        Iniciar Sesion
-                    </button>
-                </form>
-                <div className="card card-body">
-                    <h1>{error}</h1>
+                </section>
+                <div class="footer-login">
+                    {/* <h1>soy el footer</h1> */}
                 </div>
             </div>
-            <ComponentFooter><Footer></Footer></ComponentFooter>
-        </div>
+        </>
     );
 }
