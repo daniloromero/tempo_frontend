@@ -34,12 +34,9 @@
 }
 
 .mini-content {
-    /* background: #fff; */
-    /* background: url('../../static/miamigallery2019.png') no-repeat center center fixed; */
     width: 100%;
     height: 100%;
     min-height: 600px;/*800 para chrome*/
-    /* margin-bottom: -80px; */
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -54,6 +51,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 90px;
 }
 
 .content-body {
@@ -98,13 +96,13 @@
     border-radius: 9px;
 }
 
-form {
+.form-filter {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 9px;
 }
 
-form p {
+.form-filter p {
     color: white;
     margin-bottom: 15px;
 }

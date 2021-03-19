@@ -4,7 +4,6 @@
     margin: 0;
     text-decoration: none;
     font-family: 'Poppins', 'sans-serif';
-    /* overflow-x: hidden; */
 }
 
 
@@ -39,6 +38,7 @@ nav{
 
 main {
     height: 100%;
+    margin-top: 90px;
 }
 
 .banner-all-home {
@@ -75,13 +75,13 @@ main {
     border-radius: 9px;
 }
 
-form {
+.form-filter {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 9px;
 }
 
-form p {
+.form-filter p {
     color: white;
     margin-bottom: 15px;
 }
@@ -150,18 +150,3 @@ footer {
 footer:hover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 9), black);
 }
-
-
-  /* <Header></Header>
-                <div className="container_daniela">
-                    <div className="img_daniela">
-                        <img src="https://i.ibb.co/Kw6B45K/Whats-App-Image-2021-03-12-at-19-28-45.jpg" alt="logo_tempo"></img>
-                    </div>
-                    <h1 className="daniela_title">
-                        <blockquote><font size="+7">Encuentra tus shows a TEMPO</font></blockquote>
-                    </h1>
-                </div>
-                <div className="container-cards-home">
-                    <ShowsRender2 data={data}></ShowsRender2>
-                </div>
-                <Footer></Footer>  */
