@@ -2,9 +2,8 @@ import React from 'react'
 import useFetch from "../Hooks/Hooks"
 import Loading from "../Helpers/Loading"
 import Error from "../Helpers/Error"
-import Header from '../Header';
-import Footer from '../Footer/index';
-
+import Header from '../Headers/header';
+import '../../assets/styles/components/Profile.css'
 import { ShowsRender } from "./showcards"
 import '../../assets/styles/components/Shows.css'
 

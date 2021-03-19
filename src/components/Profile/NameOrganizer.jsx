@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function NameOrganizer({data}) {
+export default function NameOrganizer({ data }) {
     return (
         <div>
             {

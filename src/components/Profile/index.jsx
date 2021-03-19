@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-// import DataOrganizer from './DataOrganizer'
 import Profile from './Profile'
 import '../../assets/styles/components/Profile.css'
 import NameOrganizer from './NameOrganizer'
-
 import metronomoTempo2 from '../../assets/static/metronomoTempo2.jpg'
-import HeaderProfile from './HeaderProfile'
+import HeaderProfile from '../Headers/header-profile';
 import Footer from "../Footer/index";
 
 
@@ -14,15 +12,14 @@ const API = process.env.REACT_APP_API
 export default function Tonto({ data }) {
 
     const req = Object.entries(data);
+    console.log(req[0])
 
-
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
+    const [name] = useState('');
+    const [email] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [nameID, setNameID] = useState(req[0].map((element) => JSON.stringify(element[0].names_organizer)))
-    const [nameEmail, setNameEmail] = useState(req[0].map((element) => JSON.stringify(element[0].email)))
-    const [nameFecha, setNameFecha] = useState(req[0].map((element) => JSON.stringify(element[0].created_at)))
+    const [nameID, setnameID] = useState(req[0].map((element) => (element[0].names_organizer)))
+    const [nameEmail, setemail] = useState(req[0].map((element) => (element[0].email)))
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -40,14 +37,13 @@ export default function Tonto({ data }) {
         }).then(
             function (response) {
                 if (response.status === 200)
-                    // props.history.push('/login')
                     console.log(response);
             }
         ).catch(
             (error) => console.log(error)
         )
     }
-
+    console.log("soy el email", email)
     return (
         <div className="container-body">
             <div className="content-dark-body">
@@ -75,8 +71,8 @@ export default function Tonto({ data }) {
                                             <div className="form-group">
                                                 <input
                                                     type="text"
-                                                    onChange={e => setName(e.target.value)}
-                                                    value={name}
+                                                    onChange={e => setnameID(e.target.value)}
+                                                    value={nameID}
                                                     className="form-control"
                                                     placeholder={nameID}
                                                     autoFocus
@@ -85,19 +81,10 @@ export default function Tonto({ data }) {
                                             <div className="form-group">
                                                 <input
                                                     type="email"
-                                                    onChange={e => setEmail(e.target.value)}
-                                                    value={email}
-                                                    className="form-control"
+                                                    onChange={e => setemail(e.target.value)}
+                                                    value={nameEmail}
                                                     placeholder={nameEmail}
-                                                />
-                                            </div>
-                                            <div className="form-group">
-                                                <input
-                                                    type="text"
-                                                    onChange={e => setPassword(e.target.value)}
-                                                    value={password}
                                                     className="form-control"
-                                                    placeholder={nameFecha}
                                                 />
                                             </div>
                                             <div className="form-group">
@@ -106,7 +93,7 @@ export default function Tonto({ data }) {
                                                     onChange={e => setPassword(e.target.value)}
                                                     value={password}
                                                     className="form-control"
-                                                    placeholder="Contraseña"
+                                                    placeholder="Contraseña Actual"
                                                 />
                                             </div>
                                             <div className="form-group">
@@ -115,7 +102,7 @@ export default function Tonto({ data }) {
                                                     onChange={e => setConfirmPassword(e.target.value)}
                                                     value={confirmPassword}
                                                     className="form-control"
-                                                    placeholder="Confirmar Contraseña"
+                                                    placeholder="Nueva Contraseña"
                                                 />
                                             </div>
                                             <button className="btn btn-primary btn-block">
