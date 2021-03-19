@@ -70,7 +70,7 @@ export const Login = (props) => {
                     </div>
                 </section>
                 <div class="footer-login">
-                    <h1>soy el footer</h1>
+                    {/* <h1>soy el footer</h1> */}
                 </div>
             </div>
         </>

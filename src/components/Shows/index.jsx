@@ -6,6 +6,7 @@ import Header from '../Headers/header';
 import '../../assets/styles/components/Profile.css'
 import { ShowsRender } from "./showcards"
 import '../../assets/styles/components/Shows.css'
+import Footer from '../Footer/index'
 
 const API = process.env.REACT_APP_API;
 
@@ -25,7 +26,7 @@ export const Shows = () => {
                         <div className="content-head">
                             <div className="content-of-head">
                                 <div className="filter">
-                                    <form action="/shows">
+                                    <form action="/shows" className="form-filter">
                                         <p>Buscar ahora:</p>
                                         <div className="selects">
                                             <select name="" id="">

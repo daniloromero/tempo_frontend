@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import "../../assets/styles/components/header.css";
-import logoTempo from "../../assets/static/logo_blanco.png";
+import logoTempo from "../../assets/static/tempo-05.png";
 
 
 export default function HeaderProfile() {

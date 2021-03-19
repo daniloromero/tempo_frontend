@@ -23,9 +23,7 @@ export default function Home() {
         return (
             <div className="all-content-img">
                     <div className="dark-img">
-                        <nav>
-                            <h1>navbar</h1>
-                        </nav>
+                        <Header></Header>
                         <main>
                             <div className="banner-all-home">
                                 <div className="tagline">
@@ -35,7 +33,7 @@ export default function Home() {
                                     <h1>Encuentra eventos a Tempo.</h1>
                                 </div>
                                 <div className="filter">
-                                    <form action="/shows">
+                                    <form action="/shows" className="form-filter">
                                         <p>Buscar ahora:</p>
                                         <div className="selects">
                                             <select name="" id="">
