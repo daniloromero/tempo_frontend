@@ -28,20 +28,22 @@ export const ShowsRender2 = ({ data }) => {
                       <img src={Image1} alt="image_tempo_icon"></img>
                     </div>
                     <div className="container-text">
-                      <h4>Status</h4>
                       <div className="popup-show-cont">
-                        <h3>{sh.name_show}</h3>
+                        <h2>{sh.name_show}</h2><br></br>
                         <div className="description-date">
-                          <div className="description"><h5>Descripción</h5><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis voluptas mollitia doloribus est consequuntur laboriosam molestias eius! Ea, facere dicta. Omnis quidem quis sit quaerat ratione aut quo ex tempore.</p></div>
+                          <div className="description"><h4>Descripción</h4><p>{sh.description_show}</p></div>
                           <div className="date-hour">
-                            <p>Fecha: {sh.date.slice(0, 11)}</p>
-                            <p>hora: {sh.hour}</p>
+                            <h4>Fecha</h4>
+                            <p>{sh.date.slice(0, 11)}</p>
+                            <h4>Hora</h4>
+                            <p>{sh.hour}</p>
+                            <h4>Dirección</h4>
+                            <p>{venue[index].address}</p>
                           </div>
                         </div>
-                        <p>{venue[index].address}</p>
                         <div className="description-date">
                           <div className="description">
-                            <h5>Bandas invitadas</h5>
+                            <h4>Bandas invitadas</h4>
                             {
                               artists[index].map((artist) => {
                                 return (

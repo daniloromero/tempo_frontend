@@ -34,3 +34,11 @@
 .footer-tagline h3 {
     color: #eee;
 }
+
+.content-all-f {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

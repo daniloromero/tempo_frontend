@@ -51,7 +51,7 @@ export default function Tonto({ data }) {
                 <div className="banner">
                     <section className="parallax2" id="section2">
                         <div className="img-div">
-                            <img className="logotype" src={metronomoTempo2}/>
+                            <img className="logotype" src={metronomoTempo2} />
                         </div>
                     </section>
                     <div className="name-organizer">
@@ -68,7 +68,7 @@ export default function Tonto({ data }) {
                                 <div className="row p-4">
                                     <div className="col-md-12">
                                         <form onSubmit={handleSubmit} className="card card-body">
-                                            <div className="form-group">
+                                            <div className="content-inp-form">
                                                 <input
                                                     type="text"
                                                     onChange={e => setnameID(e.target.value)}
@@ -78,7 +78,7 @@ export default function Tonto({ data }) {
                                                     autoFocus
                                                 />
                                             </div>
-                                            <div className="form-group">
+                                            <div className="content-inp-form">
                                                 <input
                                                     type="email"
                                                     onChange={e => setemail(e.target.value)}
@@ -87,7 +87,7 @@ export default function Tonto({ data }) {
                                                     className="form-control"
                                                 />
                                             </div>
-                                            <div className="form-group">
+                                            <div className="content-inp-form">
                                                 <input
                                                     type="password"
                                                     onChange={e => setPassword(e.target.value)}
@@ -96,7 +96,7 @@ export default function Tonto({ data }) {
                                                     placeholder="Contraseña Actual"
                                                 />
                                             </div>
-                                            <div className="form-group">
+                                            <div className="content-inp-form">
                                                 <input
                                                     type="password"
                                                     onChange={e => setConfirmPassword(e.target.value)}
@@ -105,14 +105,14 @@ export default function Tonto({ data }) {
                                                     placeholder="Nueva Contraseña"
                                                 />
                                             </div>
-                                            <button className="btn btn-primary btn-block">
-                                                Actualizar
-                                            </button>
+                                            <div className="content-inp-form">
+                                                <input type="submit" value="Actualizar" />
+                                            </div>
                                         </form>
-                                    </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         <div className="section-cards">
                             <div className="title2">
                                 <h2>Mis Eventos</h2>

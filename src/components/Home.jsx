@@ -42,7 +42,7 @@ export default function Home() {
                                                 <option value="Medellin">Medellín</option>
                                                 <option value="Cali">Cali</option>
                                             </select>
-                                            <select name="" id="">
+                                            <select  name="" id="">
                                                 <option value="">Rango de fecha</option>
                                                 <option value="">Hoy</option>
                                                 <option value="">Próximos 7 días</option>
