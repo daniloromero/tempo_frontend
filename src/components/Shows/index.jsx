@@ -11,7 +11,7 @@ import Footer from '../Footer/index'
 const API = process.env.REACT_APP_API;
 
 export const Shows = () => {
-    const { data, loading, error } = useFetch(`${API}/api/shows`)
+    const { data, loading, error } = useFetch(`${API}/shows`)
     if (loading) {
         return <Loading />
     }
