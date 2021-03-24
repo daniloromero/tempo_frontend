@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../../styles/login.css"
+import "../../assets/styles/components/login.css"
 import Header from '../Headers/header';
 
 

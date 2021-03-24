@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/error.css"
+import "../assets/styles/components/error.css"
 
 export default function PageError() {
     return (

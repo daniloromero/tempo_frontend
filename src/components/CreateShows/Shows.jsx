@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import "../../styles/create-show-video.css"
+import "../../assets/styles/components/create-show-video.css"
 import { useHistory } from "react-router-dom";
-import video from "../../styles/TEMPO.mp4";
+import video from "../../assets/static/TEMPO.mp4";
 import HeaderProfile from '../Headers/header-profile';
 
 

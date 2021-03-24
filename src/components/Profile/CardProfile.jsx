@@ -6,7 +6,7 @@ import Image5 from '../../assets/images/show5.jpeg'
 import Image6 from '../../assets/images/show6.jpeg'
 import Image7 from '../../assets/images/show7.jpeg'
 import Image8 from '../../assets/images/show8.jpeg'
-import '../Shows/popup_styles.css'
+import '../../assets/styles/components/popup_styles.css'
 
 
 export const ShowsRender3 = ({ data }) => {
