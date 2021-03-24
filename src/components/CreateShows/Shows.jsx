@@ -90,7 +90,7 @@ export default function CreateShow() {
                 </video>
                 <div className="text">
                     <div className="principal-buttom">
-                        <a href="#content-show1">Crear mi show</a>
+                        <a href="#content-show1">Crear mi evento</a>
                     </div>
                     <form onSubmit={handleSubmit}>
                         <div className="content-shows" id="content-show1">

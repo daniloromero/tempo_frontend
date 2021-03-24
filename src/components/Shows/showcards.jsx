@@ -1,8 +1,16 @@
 import Image1 from '../../assets/images/show1.jpeg'
+import Image2 from '../../assets/images/show2.jpeg'
+import Image3 from '../../assets/images/show3.jpeg'
+import Image4 from '../../assets/images/show4.jpeg'
+import Image5 from '../../assets/images/show5.jpeg'
+import Image6 from '../../assets/images/show6.jpeg'
+import Image7 from '../../assets/images/show7.jpeg'
+import Image8 from '../../assets/images/show8.jpeg'
 import './popup_styles.css'
 
 
 export const ShowsRender = ({ data }) => {
+  let images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8]
   let shows = data.map((show) => (show[0]))
   console.log(shows)
   let artists = data.map((artist) => (artist[1]))
@@ -18,7 +26,7 @@ export const ShowsRender = ({ data }) => {
             <>
               <div className="showcard">
                 <div className="cardvisible">
-                  <img src={Image1} alt="image_tempo_icon"></img>
+                  <img src={images[index]} alt="image_tempo_icon"></img>
                   <div className="showinfo">
                     <h3 >{sh.name_show}</h3>
                     <p>Entrada: {sh.price_ticket}.<br></br>{sh.date.slice(0, 11)}</p>
@@ -28,7 +36,7 @@ export const ShowsRender = ({ data }) => {
                 <div className="container-all" id={`${sh.id}`}>
                   <div className="popup">
                     <div className="hiddenimg">
-                      <img src={Image1} alt="image_tempo_icon"></img>
+                      <img src={images[index]} alt="image_tempo_icon"></img>
                     </div>
                     <div className="container-text">
                       <div className="popup-show-cont">
