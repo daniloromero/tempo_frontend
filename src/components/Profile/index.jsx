@@ -6,13 +6,12 @@ import metronomoTempo2 from '../../assets/static/metronomoTempo2.jpg'
 import HeaderProfile from '../Headers/header-profile';
 import Footer from "../Footer/index";
 
-
+// connection to flask API on port 5000 add to .env file
 const API = process.env.REACT_APP_API
 
 export default function Tonto({ data }) {
 
     const req = Object.entries(data);
-    console.log(req[0])
 
     const [name] = useState('');
     const [email] = useState('');
@@ -43,7 +42,6 @@ export default function Tonto({ data }) {
             (error) => console.log(error)
         )
     }
-    console.log("soy el email", email)
     return (
         <div className="container-body">
             <div className="content-dark-body">

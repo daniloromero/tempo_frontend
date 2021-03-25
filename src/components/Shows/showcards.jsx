@@ -12,7 +12,6 @@ import '../../assets/styles/components/popup_styles.css'
 export const ShowsRender = ({ data }) => {
   let images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8]
   let shows = data.map((show) => (show[0]))
-  console.log(shows)
   let artists = data.map((artist) => (artist[1]))
   let venue = data.map((venue) => (venue[2]))
   let show = shows.map((sh) => (sh))

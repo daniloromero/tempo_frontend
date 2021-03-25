@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "../../assets/styles/components/login.css"
 import Header from '../Headers/header';
 
-
+// connection to flask API on port 5000 add to .env file
 const API = process.env.REACT_APP_API
 
 
@@ -70,7 +70,6 @@ export const Login = (props) => {
                     </div>
                 </section>
                 <div class="footer-login">
-                    {/* <h1>soy el footer</h1> */}
                 </div>
             </div>
         </>

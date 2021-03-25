@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-/* fetch custome hook */
+/* fetch custom hook to call flask API*/
 const useFetch = (url) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
