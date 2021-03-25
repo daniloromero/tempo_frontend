@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Header from '../Headers/header';
 import "../../assets/styles/components/register.css"
 
-
+// connection to flask API on port 5000 add to .env file
 const API = process.env.REACT_APP_API
 
 export const Register = (props) => {
