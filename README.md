@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/ZoltanMG/Tempo">
+  <a href="https://github.com/ZoltanMG/tempo_frontend">
     <img src="https://i.ibb.co/pvQrdk6/LOGO-TEMPO.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -19,14 +19,14 @@
   <p align="center">
     Encuentra shows a tempo
     <br />
-    <a href="https://github.com/ZoltanMG/Tempo"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ZoltanMG/tempo_frontend"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ZoltanMG/Tempo">View Demo</a>
+    <a href="https://github.com/ZoltanMG/tempo_frontend">View Demo</a>
     ·
-    <a href="https://github.com/ZoltanMG/Tempo/issues">Report Bug</a>
+    <a href="https://github.com/ZoltanMG/tempo_frontend/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ZoltanMG/Tempo/issues">Request Feature</a>
+    <a href="https://github.com/ZoltanMG/tempo_frontend/issues">Request Feature</a>
   </p>
 </p>
 
@@ -161,16 +161,16 @@ Distributed under the GCP License. See `LICENSE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/ZoltanMG/Tempo.svg?style=for-the-badge
-[contributors-url]: https://github.com/ZoltanMG/Tempo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ZoltanMG/Tempo.svg?style=for-the-badge
-[forks-url]: https://github.com/ZoltanMG/Tempo/network/members
-[stars-shield]: https://img.shields.io/github/stars/ZoltanMG/Tempo.svg?style=for-the-badge
-[stars-url]: https://github.com/ZoltanMG/Tempo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ZoltanMG/Tempo.svg?style=for-the-badge
-[issues-url]: https://github.com/ZoltanMG/Tempo/issues
-[license-shield]: https://img.shields.io/github/license/ZoltanMG/Tempo.svg?style=for-the-badge
-[license-url]: https://github.com/ZoltanMG/Tempo/blob/main/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/ZoltanMG/tempo_frontend.svg?style=for-the-badge
+[contributors-url]: https://github.com/ZoltanMG/tempo_frontend/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ZoltanMG/tempo_frontend.svg?style=for-the-badge
+[forks-url]: https://github.com/ZoltanMG/Ttempo_frontend/network/members
+[stars-shield]: https://img.shields.io/github/stars/ZoltanMG/tempo_frontend.svg?style=for-the-badge
+[stars-url]: https://github.com/ZoltanMG/tempo_frontend/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ZoltanMG/tempo_frontend.svg?style=for-the-badge
+[issues-url]: https://github.com/ZoltanMG/tempo_frontend/issues
+[license-shield]: https://img.shields.io/github/license/ZoltanMG/tempo_frontend.svg?style=for-the-badge
+[license-url]: https://github.com/ZoltanMG/tempo_frontend/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/daniela-morales-89049b199/
 [product-screenshot]: https://i.ibb.co/zQVvNq8/IMAGEN-TEMPO-DEMO.png
@@ -182,7 +182,8 @@ Distributed under the GCP License. See `LICENSE` for more information.
 - Daniela Morales    <a href="https://twitter.com/Daniela10716033"><img src="https://img.icons8.com/fluent/48/000000/twitter.png" width="20px"></a> &nbsp; <a href="https://www.linkedin.com/in/daniela-morales-89049b199/"><img src="https://img.icons8.com/fluent/20/000000/linkedin.png"></a> &nbsp; <a href="https://github.com/daniela2001-png"><img src="https://img.icons8.com/fluent/20/000000/github.png"></a>
 - Zoltan Mora   <a href="https://twitter.com/MgZoltan"><img src="https://img.icons8.com/fluent/48/000000/twitter.png" width="20px"></a> &nbsp;  <a href="www.linkedin.com/in/zoltan-mg"><img src="https://img.icons8.com/fluent/20/000000/linkedin.png"></a> &nbsp; <a href="https://github.com/ZoltanMG"><img src="https://img.icons8.com/fluent/20/000000/github.png"/></a>
 - Danilo Romero   <a href="https://twitter.com/terpenoide"><img src="https://img.icons8.com/fluent/48/000000/twitter.png" width="20px"></a> &nbsp;  <a href="https://www.linkedin.com/in/danilo-romero-beltran/"><img src="https://img.icons8.com/fluent/20/000000/linkedin.png"></a> &nbsp; <a href="https://github.com/daniloromero"><img src="https://img.icons8.com/fluent/20/000000/github.png"></a>
-- Santiago Trujillo  <a href="https://twitter.com/thiago9623"><img src="https://img.icons8.com/fluent/48/000000/twitter.png" width="20px"></a> &nbsp;  <a href="LINKDEIN"><img src="https://img.icons8.com/fluent/20/000000/linkedin.png"></a> &nbsp; <a href="GITHUB"><img src="https://img.icons8.com/fluent/20/000000/github.png"/></a>
+- Santiago Trujillo  <a href="https://twitter.com/thiago9623"><img src="https://img.icons8.com/fluent/48/000000/twitter.png" width="20px"></a> &nbsp;  <a 
+href="tempo_frontend"><img src="https://img.icons8.com/fluent/20/000000/linkedin.png"></a> &nbsp; <a href="GITHUB"><img src="https://img.icons8.com/fluent/20/000000/github.png"/></a>
 - Camilo Torres   <a href="TWITTER"><img src="https://img.icons8.com/fluent/48/000000/twitter.png" width="20px"></a> &nbsp;  <a href="LINKDEIN"><img src="https://img.icons8.com/fluent/20/000000/linkedin.png"></a> &nbsp; <a href="GITHUB"><img src="https://img.icons8.com/fluent/20/000000/github.png"/></a>
 
 ------------
