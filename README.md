@@ -21,8 +21,10 @@
     <br />
     <a href="https://github.com/ZoltanMG/tempo_frontend"><strong>Explore the docs »</strong></a>
     <br />
+    <img src="https://github.com/daniloromero/tempo_frontend/blob/main/screenshot.png" alt="Tempo" width="800" height="350">
     <br />
-    <a href="https://github.com/ZoltanMG/tempo_frontend">View Demo</a>
+    <br />
+    <a href="https://www.youtube.com/watch?v=UdNMckDRnzs">View Demo</a>
     ·
     <a href="https://github.com/ZoltanMG/tempo_frontend/issues">Report Bug</a>
     ·
