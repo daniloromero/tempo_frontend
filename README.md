@@ -130,7 +130,7 @@ On the other hand, if you only want to know what shows will be held in certain p
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/ZoltanMG/Tempo/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/ZoltanMG/tempo_frontend/issues) for a list of proposed features (and known issues).
 
 
 
